@@ -1,0 +1,30 @@
+{
+    "deno_version": {
+		"prefix": "deno_version",
+		"body": [
+            "import { VERSION } from 'https://deno.land/std/version.ts'"
+		],
+		"description": "Get current version of Deno"
+    },
+    "deno_util_deep_assign": {
+		"prefix": "deno_util_deep_assign",
+		"body": [
+            "import { ${1:deepAssign} } from 'https://deno.land/std/_util/deep_assign.ts'"
+		],
+		"description": "Utility Module"
+    },
+    "deno_util_deep_assign_test": {
+		"prefix": "deno_util_deep_assign_test",
+		"body": [
+            "import { ${1:deepAssignTest} } from 'https://deno.land/std/_util/deep_assign_test.ts'"
+		],
+		"description": "Utility Module"
+    },
+    "deno_util_has_own_property": {
+		"prefix": "deno_util_has_own_property",
+		"body": [
+            "import { hasOwnProperty } from 'https://deno.land/std/_util/has_own_property.ts'"
+		],
+		"description": "Utility Module. Determines whether an object has a property with the specified name. Avoid calling prototype builtin `hasOwnProperty` for two reasons: 1. `hasOwnProperty` is defined on the object as something else. 2. The object doesn't inherit from `Object.prototype`."
+    }
+}

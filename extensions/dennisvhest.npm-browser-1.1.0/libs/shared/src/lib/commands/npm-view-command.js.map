@@ -1,0 +1,1 @@
+{"version":3,"file":"npm-view-command.js","sourceRoot":"","sources":["../../../../../../libs/shared/src/lib/commands/npm-view-command.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,YAAY,EAAE,MAAM,WAAW,CAAC;AAGzC;IAKI,wBAAY,WAAmB;QAC3B,IAAI,CAAC,IAAI,GAAG,YAAY,CAAC,YAAY,CAAC;QACtC,IAAI,CAAC,OAAO,GAAG,cAAY,WAAW,YAAS,CAAA;IACnD,CAAC;IACL,qBAAC;AAAD,CAAC,AATD,IASC"}

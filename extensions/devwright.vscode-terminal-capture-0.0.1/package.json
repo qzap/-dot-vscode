@@ -1,0 +1,67 @@
+{
+	"name": "vscode-terminal-capture",
+	"displayName": "Terminal Capture",
+	"description": "  Take an open terminal's output and open it in a tab to quickly navigate and edit the output.",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/mikekwright/vscode-terminal-capture"
+	},
+	"version": "0.0.1",
+	"publisher": "devwright",
+	"engines": {
+		"vscode": "^1.31.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"*"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "extension.terminalCapture.runCapture",
+				"title": "Terminal: Capture"
+			}
+		],
+		"configuration": {
+			"title": "Terminal Capture",
+			"type": "object",
+			"properties": {
+				"terminalCapture.enable": {
+					"type": "boolean",
+					"description": "If false, disable the terminal capture extension",
+					"default": true
+				},
+				"terminalCapture.useClipboard": {
+					"type": "boolean",
+					"description": "If false, use the cache mode that tracks all history",
+					"default": true
+				}
+			}
+		}
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"postinstall": "node ./node_modules/vscode/bin/install",
+		"test": "npm run compile && node ./node_modules/vscode/bin/test"
+	},
+	"devDependencies": {
+		"typescript": "^3.3.1",
+		"vscode": "^1.1.28",
+		"tslint": "^5.12.1",
+		"@types/node": "^10.12.21",
+		"@types/mocha": "^2.2.42"
+	},
+	"dependencies": {
+		"vsce": "^1.57.0"
+	},
+	"__metadata": {
+		"id": "ef3377ea-5d5d-4341-ba99-3915934f28ba",
+		"publisherId": "f895f2a4-1db8-4630-b001-dc941dfca333",
+		"publisherDisplayName": "Wright Development"
+	}
+}

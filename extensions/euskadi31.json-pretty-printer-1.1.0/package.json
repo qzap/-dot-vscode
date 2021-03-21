@@ -1,0 +1,78 @@
+{
+	"name": "json-pretty-printer",
+	"displayName": "JSON Pretty Printer",
+	"description": "Visual Studio Code JSON Pretty Printer",
+	"version": "1.1.0",
+	"publisher": "euskadi31",
+	"author": {
+		"name": "Axel Etcheverry",
+		"email": "euskadi31@gmail.com"
+	},
+	"engines": {
+		"vscode": "^1.27.0"
+	},
+	"license": "MIT",
+	"icon": "icons/json-pretty-printer-logo.png",
+	"galleryBanner": {
+		"color": "#2d323b",
+		"theme": "dark"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/euskadi31/vscode-json-pretty-printer"
+	},
+	"categories": [
+		"Formatters"
+	],
+	"keywords": [
+		"json",
+		"pretty-print",
+		"pretty-printer",
+		"formatter"
+	],
+	"activationEvents": [
+		"onCommand:extension.prettyPrint"
+	],
+	"main": "./out/extension",
+	"contributes": {
+		"commands": [
+			{
+				"command": "extension.prettyPrint",
+				"title": "JSON Pretty Print"
+			}
+		]
+	},
+	"badges": [
+		{
+			"url": "https://travis-ci.org/euskadi31/vscode-json-pretty-printer.svg?branch=master",
+			"href": "https://travis-ci.org/euskadi31/vscode-json-pretty-printer",
+			"description": "Travis CI"
+		}
+	],
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"postinstall": "node ./node_modules/vscode/bin/install",
+		"test": "npm run compile && node ./node_modules/vscode/bin/test",
+		"package": "npm run compile && vsce package -o json-pretty-printer.vsix --baseContentUrl https://raw.githubusercontent.com/euskadi31/vscode-json-pretty-printer/master/",
+		"publish": "npm run package && vsce publish --baseContentUrl https://raw.githubusercontent.com/euskadi31/vscode-json-pretty-printer/master/"
+	},
+	"devDependencies": {
+		"typescript": "^3.2.2",
+		"vscode": "^1.1.21",
+		"tslint": "^5.11.0",
+		"@types/node": "^10.12.12",
+		"@types/mocha": "^5.2.5"
+	},
+	"dependencies": {
+		"@types/strip-json-comments": "0.0.30",
+		"json-to-ast": "^2.0.7",
+		"strip-json-comments": "^2.0.1"
+	},
+	"__metadata": {
+		"id": "eb0cf03f-2625-4ef5-8caa-e3ef15d22292",
+		"publisherId": "c5577d8c-02fb-42a2-8408-6659cd9f5b68",
+		"publisherDisplayName": "Axel Etcheverry"
+	}
+}

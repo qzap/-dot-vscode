@@ -1,0 +1,37 @@
+{
+	"name": "bracketselection",
+	"displayName": "Bracket Selection",
+	"description": "",
+	"version": "1.0.3",
+	"publisher": "guosong",
+	"engines": {
+		"vscode": "^1.4.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:extension.selectTextInBracket"
+	],
+	"main": "./extension",
+	"contributes": {
+		"commands": [
+			{
+				"command": "extension.selectTextInBracket",
+				"title": "Select text in brackets"
+			}
+		]
+	},
+	"scripts": {
+		"postinstall": "node ./node_modules/vscode/bin/install"
+	},
+	"devDependencies": {
+		"vscode": "^0.11.0"
+	},
+	"pic": "https://github.com/geforcesong/myvscodeplugin/raw/master/images/select.gif",
+	"__metadata": {
+		"id": "a83cf11f-90b3-4b62-9e3f-2776a53a1c85",
+		"publisherId": "404deeda-bb9d-489f-b86f-e3b898f507ff",
+		"publisherDisplayName": "Guo Song"
+	}
+}

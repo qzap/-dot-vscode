@@ -1,0 +1,51 @@
+{
+	"name": "vscode-elasticsearch-snippets",
+	"publisher": "deerawan",
+	"version": "1.1.0",
+	"displayName": "Elasticsearch snippets",
+	"description": "Elasticsearch snippets",
+	"license": "See License in LICENSE.md",
+	"icon": "images/elastic-logo.png",
+	"galleryBanner": {
+		"color": "#1c868c",
+		"theme": "dark"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/deerawan/vscode-elasticsearch-snippets"
+	},
+	"bugs": {
+		"url": "https://github.com/deerawan/vscode-elasticsearch-snippets/issues"
+	},
+	"engines": {
+		"vscode": "0.10.x"
+	},
+	"keywords": [
+		"Elasticsearch",
+		"Elastic"
+	],
+	"categories": [
+		"Snippets"
+	],
+	"contributes": {
+		"snippets": [
+			{
+				"path": "./snippets/query.code-snippets"
+			},
+			{
+				"path": "./snippets/metric-aggs.code-snippets"
+			},
+			{
+				"path": "./snippets/bucket-aggs.code-snippets"
+			},
+			{
+				"path": "./snippets/misc.code-snippets"
+			}
+		]
+	},
+	"__metadata": {
+		"id": "8a8fb706-9a21-41b2-8271-afc76a8d2350",
+		"publisherId": "c9174db5-9cbf-425f-8309-bc5d0be78c03",
+		"publisherDisplayName": "Budi Irawan"
+	}
+}

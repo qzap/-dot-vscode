@@ -1,0 +1,46 @@
+{
+	"name": "markdown-svelte",
+	"displayName": "Markdown Svelte syntax highlight",
+	"description": "",
+	"version": "0.1.0",
+	"publisher": "itslooklike",
+	"license": "MIT",
+	"repository": {
+		"url": "https://github.com/itslooklike/markdown-svelte.git"
+	},
+	"bugs": {
+		"url": "https://github.com/itslooklike/markdown-svelte/issues"
+	},
+	"engines": {
+		"vscode": "^1.8.0"
+	},
+	"categories": [
+		"Programming Languages"
+	],
+	"keywords": [
+		"svelte",
+		"highlight",
+		"markdown"
+	],
+	"icon": "icons/logo.png",
+	"contributes": {
+		"grammars": [
+			{
+				"scopeName": "markdown.svelte.codeblock",
+				"path": "./syntaxes/codeblock.json",
+				"injectTo": [
+					"text.html.markdown"
+				],
+				"embeddedLanguages": {
+					"meta.embedded.block.svelte": "svelte"
+				}
+			}
+		]
+	},
+	"dependencies": {},
+	"__metadata": {
+		"id": "366a8035-fde5-42d0-8110-8d4e9f9a7c27",
+		"publisherId": "2710bfbc-9a50-4b77-b94d-40e31bbbd6a4",
+		"publisherDisplayName": "itslooklike"
+	}
+}

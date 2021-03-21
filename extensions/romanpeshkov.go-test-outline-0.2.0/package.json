@@ -1,0 +1,106 @@
+{
+	"name": "go-test-outline",
+	"displayName": "Go Tests Outline",
+	"description": "Visual Studio Code extension that adds custom view with tests of currently opened Go project",
+	"version": "0.2.0",
+	"author": {
+		"name": "Roman Peshkov",
+		"email": "peshkovroman@gmail.com"
+	},
+	"license": "MIT",
+	"publisher": "RomanPeshkov",
+	"engines": {
+		"vscode": "^1.13.0"
+	},
+	"icon": "images/icon.png",
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:gotests.package",
+		"onView:goTests",
+		"onLanguage:go"
+	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/rpeshkov/vscode-go-tests-outline.git"
+	},
+	"main": "./out/src/extension",
+	"contributes": {
+		"commands": [
+			{
+				"command": "gotests.launch",
+				"title": "Go Tests Outline: Launch test",
+				"icon": "resources/launch.svg"
+			},
+			{
+				"command": "gotests.launch_all",
+				"title": "Go Tests Outline: Launch all tests",
+				"category": "",
+				"icon": "resources/launch-all.svg"
+			}
+		],
+		"configuration": {
+			"type": "object",
+			"title": "Go Tests Outline configuration",
+			"properties": {
+				"go-tests-outline.go-test-params": {
+					"type": "string",
+					"default": "",
+					"description": "Sets additional parameters for launching 'go test' command",
+					"scope": "window"
+				}
+			}
+		},
+		"views": {
+			"explorer": [
+				{
+					"id": "goTests",
+					"name": "Go tests"
+				}
+			]
+		},
+		"menus": {
+			"view/title": [
+				{
+					"command": "gotests.launch",
+					"when": "view == goTests",
+					"group": "navigation@1"
+				},
+				{
+					"command": "gotests.launch_all",
+					"when": "view == goTests",
+					"group": "navigation@2"
+				}
+			],
+			"view/item/context": [
+				{
+					"command": "gotests.launch",
+					"when": "view == goTests && viewItem == gotest"
+				}
+			]
+		}
+	},
+	"scripts": {
+		"vscode:prepublish": "tsc -p ./",
+		"compile": "tsc -watch -p ./",
+		"postinstall": "node ./node_modules/vscode/bin/install",
+		"test": "node ./node_modules/vscode/bin/test"
+	},
+	"dependencies": {
+		"xregexp": "^3.2.0"
+	},
+	"devDependencies": {
+		"@types/mocha": "^2.2.32",
+		"@types/node": "^6.0.40",
+		"@types/xregexp": "^3.0.28",
+		"mocha": "^2.3.3",
+		"typescript": "^2.0.3",
+		"vscode": "^1.0.0"
+	},
+	"__metadata": {
+		"id": "f3b7f1ca-02fc-413c-a07e-fe29c3f68bca",
+		"publisherId": "c5e156e9-d052-416f-8c10-16759796bf88",
+		"publisherDisplayName": "RomanPeshkov"
+	}
+}

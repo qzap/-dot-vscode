@@ -1,0 +1,52 @@
+{
+	"name": "es6-string-javascript",
+	"displayName": "es6-string-javascript",
+	"description": "Highlight javascript language in ES6 template literals",
+	"version": "1.0.1",
+	"publisher": "zjcompt",
+	"icon": "docs/logo.png",
+	"engines": {
+		"vscode": "^1.19.0"
+	},
+	"galleryBanner": {
+		"color": "#dedede",
+		"theme": "light"
+	},
+	"repository": {
+		"url": "https://github.com/zjcompt/es6-string-javascript"
+	},
+	"bugs": {
+		"url": "https://github.com/zjcompt/es6-string-javascript/issues"
+	},
+	"categories": [
+		"Programming Languages"
+	],
+	"keywords": [
+		"javascript",
+		"es6",
+		"lit-javascript",
+		"lit-html"
+	],
+	"contributes": {
+		"grammars": [
+			{
+				"injectTo": [
+					"source.js",
+					"source.ts",
+					"source.jsx",
+					"source.tsx"
+				],
+				"scopeName": "inline.es6-javascript",
+				"path": "./syntaxes/es6-inline-javascript.json",
+				"embeddedLanguages": {
+					"meta.embedded.block.javascript": "javascript"
+				}
+			}
+		]
+	},
+	"__metadata": {
+		"id": "c93ba700-ecbb-4f25-99ce-79d8578b7592",
+		"publisherId": "c43e3987-a42b-4905-85e7-767392280907",
+		"publisherDisplayName": "Zach Compton"
+	}
+}

@@ -1,0 +1,51 @@
+{
+	"name": "indent-to-bracket",
+	"displayName": "Indent To Bracket",
+	"description": "Indents new lines to the last open bracket / parenthesis",
+	"version": "1.2.2",
+	"publisher": "CodeCreator",
+	"engines": {
+		"vscode": "^1.20.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"*"
+	],
+	"main": "./out/extension",
+	"contributes": {},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"postinstall": "node ./node_modules/vscode/bin/install",
+		"test": "npm run compile && node ./node_modules/vscode/bin/test"
+	},
+	"devDependencies": {
+		"typescript": "^2.6.1",
+		"vscode": "^1.1.6",
+		"@types/node": "^7.0.43",
+		"@types/mocha": "^2.2.42"
+	},
+	"keywords": [
+		"indent",
+		"indentation",
+		"bracket",
+		"brackets"
+	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/CodeCreator/vscode-indent-to-bracket.git"
+	},
+	"homepage": "https://github.com/CodeCreator/vscode-indent-to-bracket",
+	"license": "Unlicense",
+	"dependencies": {
+		"vsce": "^1.66.0"
+	},
+	"__metadata": {
+		"id": "2543c1a3-3615-4427-a1c9-a9e7b23c82fb",
+		"publisherId": "82b0d6d6-69d7-4b5f-ae6c-129934cdcdd3",
+		"publisherDisplayName": "CodeCreator"
+	}
+}

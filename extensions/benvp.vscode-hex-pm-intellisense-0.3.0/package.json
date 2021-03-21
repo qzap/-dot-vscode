@@ -1,0 +1,58 @@
+{
+	"name": "vscode-hex-pm-intellisense",
+	"displayName": "hex.pm IntelliSense",
+	"description": "Adds IntelliSense for hex.pm dependencies in your Elixir project Mixfile.",
+	"version": "0.3.0",
+	"publisher": "benvp",
+	"icon": "images/icon.png",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/benlime/vscode-hex-pm-intellisense"
+	},
+	"engines": {
+		"vscode": "^1.22.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onLanguage:elixir"
+	],
+	"main": "./out/extension",
+	"contributes": {
+		"languages": [
+			{
+				"id": "elixir",
+				"aliases": [
+					"Elixir"
+				],
+				"extensions": [
+					".exs"
+				]
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"postinstall": "node ./node_modules/vscode/bin/install",
+		"test": "npm run compile && node ./node_modules/vscode/bin/test"
+	},
+	"devDependencies": {
+		"@types/mocha": "^7.0.2",
+		"@types/node": "^14.0.13",
+		"tslint": "^6.1.2",
+		"typescript": "^3.9.5",
+		"vscode": "^1.1.37"
+	},
+	"dependencies": {
+		"axios": "^0.21.1",
+		"semver": "^7.3.2"
+	},
+	"__metadata": {
+		"id": "cf792a4b-7937-43c7-96f2-2b5f9e0c9de8",
+		"publisherId": "35353e05-24d1-4187-afc8-28f32411742c",
+		"publisherDisplayName": "Benjamin von Polheim"
+	}
+}

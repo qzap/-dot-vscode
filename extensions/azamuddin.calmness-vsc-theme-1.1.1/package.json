@@ -1,0 +1,40 @@
+{
+	"name": "calmness-vsc-theme",
+	"displayName": "Calmness Dark Theme",
+	"icon": "icons/logo.png",
+	"version": "1.1.1",
+	"description": "Dark eye-calming theme",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"url": "https://github.com/azamuddin/calmness-vsc-theme.git",
+		"type": "git"
+	},
+	"keywords": [
+		"themes"
+	],
+	"author": "Muhammad Azamuddin",
+	"license": "MIT",
+	"publisher": "azamuddin",
+	"engines": {
+		"vscode": "^1.0.0"
+	},
+	"categories": [
+		"Themes"
+	],
+	"contributes": {
+		"themes": [
+			{
+				"label": "Calmness",
+				"uiTheme": "vs-dark",
+				"path": "./themes/calmness-theme-color.json"
+			}
+		]
+	},
+	"__metadata": {
+		"id": "7bda1350-ab11-43d1-855c-baa5664b03b5",
+		"publisherId": "95d33db3-5869-4c20-b93f-ceb99a117407",
+		"publisherDisplayName": "Muhammad Azamuddin"
+	}
+}

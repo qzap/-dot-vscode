@@ -1,0 +1,128 @@
+{
+	"name": "build-runner",
+	"displayName": "Dart build_runner",
+	"description": "Dart build_runner tools in vsCode.",
+	"version": "0.0.1",
+	"publisher": "kaiqun",
+	"engines": {
+		"vscode": "^1.46.0"
+	},
+	"icon": "icon.png",
+	"repository": "https://github.com/awagege/vscode-build-runner",
+	"activationEvents": [
+		"onLanguage:dart",
+		"workspaceContains:**/pubspec.yaml"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"category": "build-runner",
+				"command": "build_runner.watch",
+				"title": "build_runner watch"
+			},
+			{
+				"category": "build-runner",
+				"command": "build_runner.watch.refresh",
+				"title": "build_runner watch refresh",
+				"icon": "$(debug-restart)"
+			},
+			{
+				"category": "build-runner",
+				"command": "build_runner.watch.quit",
+				"title": "build_runner watch quit",
+				"icon": "$(debug-stop)"
+			},
+			{
+				"category": "build-runner",
+				"command": "build_runner.build",
+				"title": "build_runner build"
+			},
+			{
+				"category": "build-runner",
+				"command": "build_runner.build.all",
+				"title": "build_runner build all",
+				"icon": "$(play)"
+			}
+		],
+		"menus": {
+			"commandPalette": [
+				{
+					"command": "build_runner.watch",
+					"when": "false"
+				},
+				{
+					"command": "build_runner.build",
+					"when": "false"
+				}
+			],
+			"explorer/context": [
+				{
+					"command": "build_runner.watch",
+					"when": "resourceFilename == pubspec.yaml && dart-code:dartProjectLoaded"
+				},
+				{
+					"command": "build_runner.build",
+					"when": "resourceFilename == pubspec.yaml && dart-code:dartProjectLoaded"
+				}
+			],
+			"view/title": [
+				{
+					"command": "build_runner.build.all",
+					"when": "view == build_runner_view",
+					"group": "navigation"
+				}
+			],
+			"view/item/context": [
+				{
+					"command": "build_runner.watch.refresh",
+					"when": "view == build_runner_view",
+					"group": "inline"
+				},
+				{
+					"command": "build_runner.watch.quit",
+					"when": "view == build_runner_view",
+					"group": "inline"
+				}
+			]
+		},
+		"views": {
+			"explorer": [
+				{
+					"id": "build_runner_view",
+					"name": "BUILD RUNNER",
+					"when": "dart-code:dartProjectLoaded"
+				}
+			]
+		}
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"lint": "eslint src --ext ts",
+		"watch": "tsc -watch -p ./",
+		"pretest": "npm run compile && npm run lint",
+		"test": "node ./out/test/runTest.js"
+	},
+	"devDependencies": {
+		"@types/vscode": "^1.46.0",
+		"@types/glob": "^7.1.1",
+		"@types/mocha": "^7.0.2",
+		"@types/node": "^13.11.0",
+		"eslint": "^6.8.0",
+		"@typescript-eslint/parser": "^2.30.0",
+		"@typescript-eslint/eslint-plugin": "^2.30.0",
+		"glob": "^7.1.6",
+		"mocha": "^7.1.2",
+		"typescript": "^3.8.3",
+		"vscode-test": "^1.3.0"
+	},
+	"dependencies": {
+		"yaml": "^1.10.0"
+	},
+	"__metadata": {
+		"id": "ae436969-975a-40b9-ae9f-57d9f36b9a57",
+		"publisherId": "b75a1d4f-8127-4ff7-af49-725495648cd1",
+		"publisherDisplayName": "Kaiqun"
+	}
+}

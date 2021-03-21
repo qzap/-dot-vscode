@@ -1,0 +1,62 @@
+{
+  "StylelintDisableAll": {
+    "prefix": "slda",
+    "body": "/* stylelint-disable */",
+    "description": "Disable all rules for the rest of the file"
+  },
+  "StylelintEnableAll": {
+    "prefix": "slea",
+    "body": "/* stylelint-enable */",
+    "description": "Enable all rules for the rest of the file"
+  },
+  "StylelintDisableRules": {
+    "prefix": "sldr",
+    "body": "/* stylelint-disable ${0:rule} */",
+    "description": "Disable the listed rules for the rest of the file"
+  },
+  "StylelintEnableRules": {
+    "prefix": "sler",
+    "body": "/* stylelint-enable ${0:rule} */",
+    "description": "Enable the listed rules for the rest of the file"
+  },
+  "StylelintDisableLine": {
+    "prefix": "sldl",
+    "body": "/* stylelint-disable-line */",
+    "description": "Disables all rules for the current line"
+  },
+  "StylelintEnableLine": {
+    "prefix": "slel",
+    "body": "/* stylelint-enable-line */",
+    "description": "Enables all rules for the current line"
+  },
+  "StylelintDisableLineRules": {
+    "prefix": "sldlr",
+    "body": "/* stylelint-disable-line ${0:rule} */",
+    "description": "Disables the listed rules for the current line"
+  },
+  "StylelintEnableLineRules": {
+    "prefix": "slelr",
+    "body": "/* stylelint-enable-line ${0:rule} */",
+    "description": "Enables the listed rules for the current line"
+  },
+  "StylelintDisableNextLine": {
+    "prefix": "sldnl",
+    "body": "/* stylelint-disable-next-line */",
+    "description": "Disables all rules for the following line"
+  },
+  "StylelintEnableNextLine": {
+    "prefix": "slenl",
+    "body": "/* stylelint-enable-next-line */",
+    "description": "Enables all rules for the following line"
+  },
+  "StylelintDisableNextLineRules": {
+    "prefix": "sldnlr",
+    "body": "/* stylelint-disable-next-line ${0:rule} */",
+    "description": "Disables the listed rules for the following line"
+  },
+  "StylelintEnableNextLineRules": {
+    "prefix": "slenlr",
+    "body": "/* stylelint-enable-next-line ${0:rule} */",
+    "description": "Enables the listed rules for the following line"
+  }
+}

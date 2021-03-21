@@ -1,0 +1,87 @@
+{
+	"name": "js-snippets",
+	"displayName": "js snippets",
+	"description": "A set of snippets for JavaScript",
+	"icon": "images/js-snippets.png",
+	"version": "0.2.6",
+	"engines": {
+		"vscode": "^1.30.0"
+	},
+	"scripts": {
+		"release": "standard-version"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/RunningCoderLee/javascript-snippets"
+	},
+	"author": {
+		"name": "RunningCoder",
+		"email": "sprint_l@outlook.com"
+	},
+	"categories": [
+		"Snippets"
+	],
+	"publisher": "runningcoder",
+	"keywords": [
+		"snippets",
+		"js",
+		"ts",
+		"javascript",
+		"typescript"
+	],
+	"license": "MIT",
+	"contributes": {
+		"snippets": [
+			{
+				"language": "html",
+				"path": "./snippets/snippets.json"
+			},
+			{
+				"language": "javascript",
+				"path": "./snippets/snippets.json"
+			},
+			{
+				"language": "javascriptreact",
+				"path": "./snippets/snippets.json"
+			},
+			{
+				"language": "typescript",
+				"path": "./snippets/snippets-ts.json"
+			},
+			{
+				"language": "typescriptreact",
+				"path": "./snippets/snippets-ts.json"
+			},
+			{
+				"language": "css",
+				"path": "./snippets/snippets-style.json"
+			},
+			{
+				"language": "scss",
+				"path": "./snippets/snippets-style.json"
+			},
+			{
+				"language": "less",
+				"path": "./snippets/snippets-style.json"
+			},
+			{
+				"language": "stylus",
+				"path": "./snippets/snippets-style.json"
+			}
+		]
+	},
+	"devDependencies": {
+		"cz-conventional-changelog": "3.0.2",
+		"standard-version": "7.0.0"
+	},
+	"config": {
+		"commitizen": {
+			"path": "./node_modules/cz-conventional-changelog"
+		}
+	},
+	"__metadata": {
+		"id": "b9fd45df-5208-4a30-a114-a9383cc3e925",
+		"publisherId": "cbd19d62-25aa-4796-bca6-5b0beb3d8ac0",
+		"publisherDisplayName": "runningcoder"
+	}
+}

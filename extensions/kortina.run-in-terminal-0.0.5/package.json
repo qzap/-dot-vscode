@@ -1,0 +1,92 @@
+{
+	"name": "run-in-terminal",
+	"displayName": "Run in Terminal",
+	"description": "Use a keyboard shortcut to run any command in the Integrated Terminal.",
+	"version": "0.0.5",
+	"publisher": "kortina",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/kortina/run-in-terminal"
+	},
+	"icon": "images/run-in-terminal.png",
+	"engines": {
+		"vscode": "^1.41.1"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:runInTerminal.run",
+		"onCommand:runInTerminal.runLast"
+	],
+	"main": "./out/extension",
+	"contributes": {
+		"commands": [
+			{
+				"command": "runInTerminal.run",
+				"title": "Run in Terminal"
+			},
+			{
+				"command": "runInTerminal.runLast",
+				"title": "Re-Run Last Command in Terminal"
+			}
+		],
+		"configuration": {
+			"title": "Run in Terminal Configuration",
+			"properties": {
+				"runInTerminal.clearBeforeRun": {
+					"type": "boolean",
+					"default": false,
+					"description": "Clear terminal before run?"
+				},
+				"runInTerminal.commands": {
+					"type": "array",
+					"items": {
+						"type": "object",
+						"properties": {
+							"name": {
+								"type": "string",
+								"description": "`name` of command. When `runInTerminal.run` is called with {'name': 'x'}, the command with `name` = 'x' and `match` =~ the current filename will be executed.",
+								"default": null
+							},
+							"match": {
+								"type": "string",
+								"description": "`match` for filename. When `runInTerminal.run` is called with {'name': 'x'}, the command with `name` = 'x' and `match` =~ the current filename will be executed.",
+								"default": null
+							},
+							"cmd": {
+								"type": "string",
+								"description": "Command to execute if found by `name` and `match`.",
+								"default": null
+							}
+						}
+					}
+				}
+			}
+		}
+	},
+	"scripts": {
+		"compile": "tsc -p ./",
+		"lint": "eslint -c .eslintrc.js --ext .ts src",
+		"vpackage": "./node_modules/.bin/vsce package",
+		"vpublish": "./node_modules/.bin/vsce publish",
+		"vscode:prepublish": "npm run compile",
+		"watch": "tsc -watch -p ./"
+	},
+	"devDependencies": {
+		"@types/mocha": "^8.2.0",
+		"@types/node": "^11.9.0",
+		"@types/vscode": "^1.32.0",
+		"@typescript-eslint/eslint-plugin": "^2.28.0",
+		"@typescript-eslint/parser": "^2.28.0",
+		"eslint": "^6.8.0",
+		"typescript": "^3.8.3",
+		"vsce": "^1.81.0",
+		"vscode-test": "^1.3.0"
+	},
+	"__metadata": {
+		"id": "71f61b89-0eaa-45ac-9c06-fdfefd29856b",
+		"publisherId": "65665850-6981-4a65-a378-200d5d37c87d",
+		"publisherDisplayName": "kortina"
+	}
+}

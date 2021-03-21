@@ -1,0 +1,269 @@
+{
+	"name": "bracketeer",
+	"displayName": "Bracketeer",
+	"description": "Easy manipulation with brackets and quotes",
+	"version": "1.3.1",
+	"publisher": "pustelto",
+	"homepage": "https://github.com/Pustelto/Bracketeer/blob/master/README.md",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/Pustelto/Bracketeer"
+	},
+	"license": "MIT",
+	"engines": {
+		"vscode": "^1.50.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"keywords": [
+		"Brackets",
+		"Parentheses",
+		"Quotes"
+	],
+	"icon": "images/bracketeer_logo.png",
+	"galleryBanner": {
+		"color": "#F9F9F9",
+		"theme": "light"
+	},
+	"activationEvents": [
+		"onCommand:bracketeer.swapBrackets",
+		"onCommand:bracketeer.changeBracketsTo",
+		"onCommand:bracketeer.removeBrackets",
+		"onCommand:bracketeer.selectBracketContent",
+		"onCommand:bracketeer.swapQuotes",
+		"onCommand:bracketeer.changeQuotesTo",
+		"onCommand:bracketeer.removeQuotes",
+		"onCommand:bracketeer.selectQuotesContent"
+	],
+	"main": "./src/extension",
+	"contributes": {
+		"keybindings": [
+			{
+				"command": "bracketeer.swapBrackets",
+				"key": "Shift+Ctrl+Alt+K",
+				"mac": "Shift+Cmd+Alt+K"
+			},
+			{
+				"command": "bracketeer.changeBracketsTo",
+				"key": "Shift+Ctrl+Alt+U",
+				"mac": "Shift+Cmd+Alt+U"
+			},
+			{
+				"command": "bracketeer.removeBrackets",
+				"key": "Shift+Ctrl+Alt+I",
+				"mac": "Shift+Cmd+Alt+I"
+			},
+			{
+				"command": "bracketeer.selectBracketContent",
+				"key": "Shift+Ctrl+Alt+H",
+				"mac": "Shift+Cmd+Alt+H"
+			},
+			{
+				"command": "bracketeer.swapQuotes",
+				"key": "Shift+Ctrl+Alt+;",
+				"mac": "Shift+Cmd+Alt+;"
+			},
+			{
+				"command": "bracketeer.changeQuotesTo",
+				"key": "",
+				"mac": ""
+			},
+			{
+				"command": "bracketeer.removeQuotes",
+				"key": "Shift+Ctrl+Alt+'",
+				"mac": "Shift+Cmd+Alt+'"
+			},
+			{
+				"command": "bracketeer.selectQuotesContent",
+				"key": "Shift+Ctrl+Alt+0",
+				"mac": "Shift+Cmd+Alt+0"
+			}
+		],
+		"commands": [
+			{
+				"command": "bracketeer.swapBrackets",
+				"title": "Swap brackets",
+				"category": "Bracketeer"
+			},
+			{
+				"command": "bracketeer.changeBracketsTo",
+				"title": "Replace brackets with...",
+				"category": "Bracketeer"
+			},
+			{
+				"command": "bracketeer.removeBrackets",
+				"title": "Remove brackets",
+				"category": "Bracketeer"
+			},
+			{
+				"command": "bracketeer.selectBracketContent",
+				"title": "Select bracket content",
+				"category": "Bracketeer"
+			},
+			{
+				"command": "bracketeer.swapQuotes",
+				"title": "Swap quotes",
+				"category": "Bracketeer"
+			},
+			{
+				"command": "bracketeer.changeQuotesTo",
+				"title": "Replace quotes with...",
+				"category": "Bracketeer"
+			},
+			{
+				"command": "bracketeer.removeQuotes",
+				"title": "Remove quotes",
+				"category": "Bracketeer"
+			},
+			{
+				"command": "bracketeer.selectQuotesContent",
+				"title": "Select quotes content",
+				"category": "Bracketeer"
+			}
+		],
+		"menus": {
+			"editor/context": [
+				{
+					"submenu": "bracketeer.brackets",
+					"group": "y_bracketeer",
+					"when": "editorIsOpen"
+				},
+				{
+					"submenu": "bracketeer.quotes",
+					"group": "y_bracketeer",
+					"when": "editorIsOpen"
+				}
+			],
+			"bracketeer.brackets": [
+				{
+					"command": "bracketeer.changeBracketsTo"
+				},
+				{
+					"command": "bracketeer.removeBrackets"
+				},
+				{
+					"command": "bracketeer.selectBracketContent"
+				},
+				{
+					"command": "bracketeer.swapBrackets"
+				}
+			],
+			"bracketeer.quotes": [
+				{
+					"command": "bracketeer.changeQuotesTo"
+				},
+				{
+					"command": "bracketeer.removeQuotes"
+				},
+				{
+					"command": "bracketeer.selectQuotesContent"
+				},
+				{
+					"command": "bracketeer.swapQuotes"
+				}
+			]
+		},
+		"submenus": [
+			{
+				"id": "bracketeer.brackets",
+				"label": "Bracketeer Brackets"
+			},
+			{
+				"id": "bracketeer.quotes",
+				"label": "Bracketeer Quotes"
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "webpack --mode production",
+		"release": "semantic-release",
+		"postinstall": "husky install && node ./node_modules/vscode/bin/install",
+		"compile": "node ./node_modules/vscode/bin/compile -watch -p ./",
+		"test": "node ./node_modules/vscode/bin/test"
+	},
+	"devDependencies": {
+		"@babel/core": "7.12.3",
+		"@babel/plugin-transform-runtime": "7.12.1",
+		"@babel/preset-env": "7.12.1",
+		"@commitlint/cli": "11.0.0",
+		"@commitlint/config-conventional": "11.0.0",
+		"@semantic-release/changelog": "5.0.1",
+		"@semantic-release/exec": "5.0.0",
+		"@semantic-release/git": "9.0.0",
+		"@types/mocha": "2.2.42",
+		"@types/node": "7.0.43",
+		"babel-loader": "8.1.0",
+		"eslint": "5.15.3",
+		"husky": "5.0.0-beta.0",
+		"semantic-release": "17.2.1",
+		"semantic-release-vsce": "3.0.1",
+		"typescript": "3.3.3",
+		"vscode": "1.1.33",
+		"webpack": "5.2.0",
+		"webpack-cli": "4.1.0"
+	},
+	"dependencies": {
+		"prism-languages": "0.4.0",
+		"prismjs": "1.15.0"
+	},
+	"commitlint": {
+		"extends": [
+			"@commitlint/config-conventional"
+		],
+		"rules": {
+			"type-enum": [
+				2,
+				"always",
+				[
+					"chore",
+					"docs",
+					"feat",
+					"fix",
+					"refactor",
+					"revert",
+					"test",
+					"style"
+				]
+			]
+		}
+	},
+	"release": {
+		"repositoryUrl": "git@github.com:Pustelto/Bracketeer.git",
+		"branches": [
+			"master",
+			"next"
+		],
+		"plugins": [
+			"@semantic-release/commit-analyzer",
+			"@semantic-release/release-notes-generator",
+			[
+				"@semantic-release/changelog",
+				{
+					"changelogFile": "./CHANGELOG.md"
+				}
+			],
+			[
+				"@semantic-release/npm",
+				{
+					"npmPublish": false
+				}
+			],
+			"@semantic-release/github",
+			[
+				"@semantic-release/exec",
+				{
+					"publish": "./vsce_publish.sh"
+				}
+			]
+		],
+		"debug": true,
+		"dryRun": false,
+		"ci": false
+	},
+	"__metadata": {
+		"id": "cacf8b9f-ed8c-440d-999d-e7fd2c1a0cdb",
+		"publisherId": "f1944b73-ab19-4aff-8f9d-72748fa07f58",
+		"publisherDisplayName": "Pustelto"
+	}
+}

@@ -1,0 +1,31 @@
+{
+	"name": "code-pretty-blue",
+	"displayName": "Code Pretty Blue Color Theme",
+	"description": "",
+	"version": "0.0.1",
+	"publisher": "CodePretty",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/jjoocceeee/code-pretty-blue-color-theme.git"
+	},
+	"engines": {
+		"vscode": "^1.51.0"
+	},
+	"categories": [
+		"Themes"
+	],
+	"contributes": {
+		"themes": [
+			{
+				"label": "Code Pretty Blue",
+				"uiTheme": "vs-dark",
+				"path": "./themes/code-pretty-blue-color-theme.json"
+			}
+		]
+	},
+	"__metadata": {
+		"id": "493b562a-20c4-4dd4-aba0-73399cd0bb9f",
+		"publisherId": "a8c73ce8-31ac-4125-a843-c2b49e6d1b90",
+		"publisherDisplayName": "Code Pretty"
+	}
+}

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
+  <Metadata>
+    <Identity Language="en-US" Id="github-browser" Version="0.0.15" Publisher="ms-vscode"/>
+    <DisplayName>GitHub Browser</DisplayName>
+    <Description xml:space="preserve">Remotely browse a GitHub repository</Description>
+    <Tags>__web_extension</Tags>
+    <Categories>Other</Categories>
+    <GalleryFlags>Public Preview</GalleryFlags>
+    <Badges></Badges>
+    <Properties>
+      <Property Id="Microsoft.VisualStudio.Code.Engine" Value="^1.49.0" />
+      <Property Id="Microsoft.VisualStudio.Code.ExtensionDependencies" Value="" />
+      <Property Id="Microsoft.VisualStudio.Code.ExtensionPack" Value="" />
+      <Property Id="Microsoft.VisualStudio.Code.ExtensionKind" Value="web,ui" />
+      <Property Id="Microsoft.VisualStudio.Code.LocalizedLanguages" Value="" />
+      
+      
+      
+      
+      
+      <Property Id="Microsoft.VisualStudio.Services.GitHubFlavoredMarkdown" Value="true" />
+      
+      
+      <Property Id="Microsoft.VisualStudio.Code.WebExtension" Value="true" />
+    </Properties>
+    <License>extension/LICENSE.txt</License>
+    
+  </Metadata>
+  <Installation>
+    <InstallationTarget Id="Microsoft.VisualStudio.Code"/>
+  </Installation>
+  <Dependencies/>
+  <Assets>
+    <Asset Type="Microsoft.VisualStudio.Code.Manifest" Path="extension/package.json" Addressable="true" />
+    <Asset Type="Microsoft.VisualStudio.Services.Content.Details" Path="extension/README.md" Addressable="true" /><Asset Type="Microsoft.VisualStudio.Services.Content.Changelog" Path="extension/CHANGELOG.md" Addressable="true" /><Asset Type="Microsoft.VisualStudio.Services.Content.License" Path="extension/LICENSE.txt" Addressable="true" /><Asset Type="Microsoft.VisualStudio.Code.WebResources/extension/package.json" Path="extension/package.json" Addressable="true" /><Asset Type="Microsoft.VisualStudio.Code.WebResources/extension/dist/browser/0.extension.js" Path="extension/dist/browser/0.extension.js" Addressable="true" /><Asset Type="Microsoft.VisualStudio.Code.WebResources/extension/dist/browser/1.extension.js" Path="extension/dist/browser/1.extension.js" Addressable="true" /><Asset Type="Microsoft.VisualStudio.Code.WebResources/extension/dist/browser/44111ff56b7a19d62585.module.wasm" Path="extension/dist/browser/44111ff56b7a19d62585.module.wasm" Addressable="true" /><Asset Type="Microsoft.VisualStudio.Code.WebResources/extension/dist/browser/extension.js" Path="extension/dist/browser/extension.js" Addressable="true" /><Asset Type="Microsoft.VisualStudio.Code.WebResources/extension/dist/browser/extension.js.LICENSE.txt" Path="extension/dist/browser/extension.js.LICENSE.txt" Addressable="true" /><Asset Type="Microsoft.VisualStudio.Code.WebResources/extension/dist/extension.js" Path="extension/dist/extension.js" Addressable="true" /><Asset Type="Microsoft.VisualStudio.Code.WebResources/extension/dist/extension.js.LICENSE.txt" Path="extension/dist/extension.js.LICENSE.txt" Addressable="true" /><Asset Type="Microsoft.VisualStudio.Code.WebResources/extension/LICENSE.txt" Path="extension/LICENSE.txt" Addressable="true" /><Asset Type="Microsoft.VisualStudio.Code.WebResources/extension/package.nls.json" Path="extension/package.nls.json" Addressable="true" /><Asset Type="Microsoft.VisualStudio.Code.WebResources/extension/CHANGELOG.md" Path="extension/CHANGELOG.md" Addressable="true" /><Asset Type="Microsoft.VisualStudio.Code.WebResources/extension/README.md" Path="extension/README.md" Addressable="true" />
+  </Assets>
+</PackageManifest>

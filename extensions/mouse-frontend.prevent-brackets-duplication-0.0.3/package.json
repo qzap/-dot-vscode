@@ -1,0 +1,43 @@
+{
+	"name": "prevent-brackets-duplication",
+	"displayName": "Prevent brackets duplication",
+	"description": "Prevent brackets duplication in all types of files.",
+	"version": "0.0.3",
+	"publisher": "mouse-frontend",
+	"engines": {
+		"vscode": "^1.17.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"*"
+	],
+	"main": "./out/extension",
+	"contributes": {
+		"commands": [
+			{
+				"command": "extension.pbd",
+				"title": "prevent brackets duplication"
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"postinstall": "node ./node_modules/vscode/bin/install",
+		"test": "npm run compile && node ./node_modules/vscode/bin/test"
+	},
+	"devDependencies": {
+		"typescript": "^2.5.3",
+		"vscode": "^1.1.5",
+		"@types/node": "^7.0.43",
+		"@types/mocha": "^2.2.42"
+	},
+	"__metadata": {
+		"id": "279f957b-3861-46ec-9569-4729c3dc9fe6",
+		"publisherId": "6ef76b4a-34f5-4c21-b12f-c1826c67a3e3",
+		"publisherDisplayName": "Evgeniy"
+	}
+}

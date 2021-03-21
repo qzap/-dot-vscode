@@ -1,0 +1,30 @@
+{
+	"name": "ES6-extension-pack",
+	"displayName": "ES6 extension pack",
+	"description": "The most common extensions for ES6 in one pack.\nThis extension pack includes: \n\nJavaScript (ES6) code snippets\nReact-Native/React/Redux snippets for es6/es7\nBabel ES6/ES7\nes6-string-html\nES6 Mocha Snippets\nReact Redux ES6 Snippets\nES5 to ES6\nES6 Import Formatter",
+	"publisher": "walkme",
+	"version": "0.0.3",
+	"categories": [
+		"Extension Packs"
+	],
+	"extensionPack": [
+		"xabikos.JavaScriptSnippets",
+		"EQuimper.react-native-react-redux",
+		"dzannotti.vscode-babel-coloring",
+		"Tobermory.es6-string-html",
+		"spoonscen.es6-mocha-snippets",
+		"timothymclane.react-redux-es6-snippets",
+		"jeremyrajan.vscode-lebab",
+		"henry-li.vscode-import-formatter"
+	],
+	"homepage": "https://walkme-shortcuts.com/",
+	"engines": {
+		"vscode": "^1.30.0"
+	},
+	"repository": "https://walkme-shortcuts.com/",
+	"__metadata": {
+		"id": "d6af65f9-bcd4-4765-8cf5-6d2ad9e6a331",
+		"publisherId": "05390d02-4558-43b9-ae89-bc092b2d2ffb",
+		"publisherDisplayName": "walkme"
+	}
+}

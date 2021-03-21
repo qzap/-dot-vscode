@@ -1,0 +1,79 @@
+{
+    "deno_encoding_yaml_test": {
+		"prefix": "deno_encoding_yaml_test",
+		"body": [
+            "import { ${1:*} } from 'https://deno.land/std/encoding/yaml_test.ts'"
+		],
+		"description": "Encoding Module: Test Yaml."
+    },
+    "deno_encoding_utf8": {
+		"prefix": "deno_encoding_utf8",
+		"body": [
+            "import { ${1:encode}, ${2:decode}, ${3:decoder} } from 'https://deno.land/std/encoding/utf8.ts'"
+		],
+		"description": "Encoding Module: Test Toml."
+	},
+	"deno_encoding_toml_test": {
+		"prefix": "deno_encoding_toml_test",
+		"body": [
+            "import { ${1:*} } from 'https://deno.land/std/encoding/toml_test.ts'"
+		],
+		"description": "Encoding Module: Test Toml."
+    },
+    "deno_encoding_hex_test": {
+		"prefix": "deno_encoding_hex_test",
+		"body": [
+            "import { ${1:*} } from 'https://deno.land/std/encoding/hex_test.ts'"
+		],
+		"description": "Encoding Module: Test Hex."
+    },
+    "deno_encoding_csv_test": {
+		"prefix": "deno_encoding_csv_test",
+		"body": [
+            "import { ${1:*} } from 'https://deno.land/std/encoding/csv_test.ts'"
+		],
+		"description": "Encoding Module: Test csv."
+    },
+    "deno_encoding_binary_test": {
+		"prefix": "deno_encoding_binary_test",
+		"body": [
+            "import { ${1:*} } from 'https://deno.land/std/encoding/binary_test.ts'"
+		],
+		"description": "Encoding Module: Test binary."
+    },
+    "deno_encoding_base32_test": {
+		"prefix": "deno_encoding_base32_test",
+		"body": [
+            "import { ${1:*} } from 'https://deno.land/std/encoding/base32_test.ts'"
+		],
+		"description": "Encoding Module: Test base32."
+    },
+	"deno_encoding_yaml_type": {
+		"prefix": "deno_encoding_yaml_type",
+		"body": [
+            "import { ${1:*} } from 'https://deno.land/std/encoding/_yaml/type.ts'"
+		],
+		"description": "Encoding Module. Available Utils: kindType, StyleVariant, RepresentFn, Type"
+    },
+	"deno_encoding_stringify_test": {
+		"prefix": "deno_encoding_stringify_test",
+		"body": [
+            "import { ${1:*} } from 'https://deno.land/std/encoding/_yaml/stringify_test.ts'"
+		],
+		"description": "Encoding Module. Stringify Test"
+    },
+	"deno_encoding_parse_test": {
+		"prefix": "deno_encoding_parse_test",
+		"body": [
+            "import { ${1:*} } from 'https://deno.land/std/encoding/_yaml/parse_test.ts'"
+		],
+		"description":  "Encoding Module. Parse Test"
+    },
+    "deno_encoding_yaml_utils": {
+		"prefix": "deno_encoding_yaml_utils",
+		"body": [
+            "import { ${1:*} } from 'https://deno.land/std/encoding/_yaml/utils.ts'"
+		],
+		"description": "Encoding Module. Available Utils: Any, isNothing, isArray, isBoolean, isNull, isNumber, isString, isSymbol, isUndefined, isObject, isFunction, isRegExp, toArray, repeat, isNegative, ArrayObject"
+    }
+}

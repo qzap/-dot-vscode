@@ -1,0 +1,81 @@
+{
+	"getxbindings": {
+		"prefix": "fu-getxbinding",
+		"body": [
+			"import 'package:get/get.dart';",
+			"",
+			"class ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}} implements Bindings {",
+			"   @override",
+			"   void dependencies() {",
+			"       ",
+			"   }",
+			"}"
+		],
+		"description": "Create GetX Binding"
+    },
+    "getxcontroller": {
+		"prefix": "fu-getxcontroller",
+		"body": [
+			"import 'package:get/get.dart';",
+			"",
+            "class ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}} extends GetxController { ",
+            "",
+			"}"
+		],
+		"description": "Create GetX Controller"
+    }, 
+    "getxRx": {
+		"prefix": "fu-getxrx",
+		"body": [
+            "final $1 = Rx<$2>($3);"
+		],
+		"description": "Create GetX Rx"
+    }, 
+    "getxObs": {
+		"prefix": "fu-getxobs",
+		"body": [
+            "final $1 = $2.obs;"
+		],
+		"description": "Create GetX Rx with .obs"
+	}, 
+    "getxcontrollerOnInit": {
+		"prefix": "fu-getxoninit",
+		"body": [
+            "@override",
+			  "void onInit() {",
+			  	"super.onInit();",
+			  	"$1",
+  			"}"
+		],
+		"description": "GetX lifeCycle onInit"
+	}, 
+    "getxcontrollerOnClose": {
+		"prefix": "fu-getxonclose",
+		"body": [
+            "@override",
+			  "void onClose() {",
+				"super.onClose();",
+				"$1",
+  			"}"
+		],
+		"description": "GetX lifeCycle onClose"
+	},
+	"getxpage": {
+		"prefix": "fu-getxpage",
+		"body": [
+			"import 'package:flutter/material.dart';",
+			"import 'package:get/get.dart';",
+			"",
+			"class ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}} extends GetView<$2Controller> {",
+			"   @override",
+			"   Widget build(BuildContext context) {",
+			"       return Scaffold(",
+			"           appBar: AppBar(title: Text('${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}}'),),",
+			"           body: Container(),",
+			"       );",
+			"  }",
+			"}"
+		],
+		"description": "Create Page with GetView"
+	}
+}

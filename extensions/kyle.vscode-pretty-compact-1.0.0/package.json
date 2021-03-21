@@ -1,0 +1,57 @@
+{
+	"name": "vscode-pretty-compact",
+	"displayName": "Pretty Compact JSON prettifier",
+	"description": "Fork of Prettify to use a more compact format",
+	"version": "1.0.0",
+	"icon": "icon.png",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/k-yle/vscode-pretty-compact.git"
+	},
+	"publisher": "Kyle",
+	"engines": {
+		"vscode": "^0.10.1"
+	},
+	"categories": [
+		"Formatters"
+	],
+	"activationEvents": [
+		"onCommand:extension.prettifyCompact"
+	],
+	"main": "./out/src/extension",
+	"contributes": {
+		"commands": [
+			{
+				"command": "extension.prettifyCompact",
+				"title": "Prettify JSON"
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "tsc -p ./",
+		"compile": "tsc -watch -p ./",
+		"postinstall": "node ./node_modules/vscode/bin/install"
+	},
+	"devDependencies": {
+		"@types/mocha": "^5.2.7",
+		"@types/node": "^12.6.2",
+		"@typescript-eslint/eslint-plugin": "^1.12.0",
+		"@typescript-eslint/parser": "^1.12.0",
+		"eslint": "^6.0.1",
+		"eslint-config-airbnb-base": "^13.2.0",
+		"eslint-plugin-import": "^2.18.0",
+		"mocha": "^6.1.4",
+		"typescript": "^3.5.3",
+		"vscode": "^1.1.35"
+	},
+	"dependencies": {
+		"json-stringify-pretty-compact": "^2.0.0",
+		"jsonlint": "^1.6.2",
+		"strip-json-comments": "^2.0.0"
+	},
+	"__metadata": {
+		"id": "ea5025ba-fc01-4fd6-af98-80951fa76b19",
+		"publisherId": "bfe090eb-085d-40c3-b4f8-f614bdd31957",
+		"publisherDisplayName": "Kyle"
+	}
+}

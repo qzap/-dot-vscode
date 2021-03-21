@@ -1,0 +1,30 @@
+{
+	"name": "black-on-light-gray",
+	"displayName": "Black on Light Gray",
+	"version": "1.0.1",
+	"description": "The simplest syntax theme ever, almost no colors at all.",
+	"author": "Risman Pratama",
+	"publisher": "rismanrp",
+	"license": "WTFPL",
+	"engines": {
+		"vscode": "^1.0.0"
+	},
+	"categories": [
+		"Themes"
+	],
+	"contributes": {
+		"themes": [
+			{
+				"label": "Black on Light Gray",
+				"uiTheme": "vs",
+				"path": "./themes/black-on-light-gray.json"
+			}
+		]
+	},
+	"repository": "https://rismanrp.visualstudio.com/_git/BlackOnLightGray",
+	"__metadata": {
+		"id": "c0eeaea3-732a-4d16-ae85-c1220c84c00e",
+		"publisherId": "96f82eab-ce9d-47d0-af83-64fb0ceb5660",
+		"publisherDisplayName": "Risman Rangga Pratama"
+	}
+}

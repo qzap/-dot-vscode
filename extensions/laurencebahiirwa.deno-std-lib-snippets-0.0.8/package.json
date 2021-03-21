@@ -1,0 +1,114 @@
+{
+	"name": "deno-std-lib-snippets",
+	"displayName": "Deno Standard Library Snippets",
+	"description": "Standard library import autocompletions for Deno in VS Code",
+	"version": "0.0.8",
+	"engines": {
+		"vscode": "^1.18.0"
+	},
+	"publisher": "laurencebahiirwa",
+	"author": {
+		"name": "Laurence Bahiirwa"
+	},
+	"license": "GPLv3",
+	"homepage": "https://github.com/bahiirwa/deno-std-lib-snippets",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/bahiirwa/deno-std-lib-snippets"
+	},
+	"bugs": {
+		"url": "https://github.com/bahiirwa/deno-std-lib-snippets/issues"
+	},
+	"icon": "images/deno-logo.png",
+	"categories": [
+		"Snippets"
+	],
+	"keywords": [
+		"Deno",
+		"Deno Modules",
+		"Deno Standard Library",
+		"Deno Standard Modules Library",
+		"std lib"
+	],
+	"contributes": {
+		"snippets": [
+			{
+				"language": "typescript",
+				"path": "./snippets/util.code-snippets"
+			},
+			{
+				"language": "typescript",
+				"path": "./snippets/archive.code-snippets"
+			},
+			{
+				"language": "typescript",
+				"path": "./snippets/async.code-snippets"
+			},
+			{
+				"language": "typescript",
+				"path": "./snippets/byte.code-snippets"
+			},
+			{
+				"language": "typescript",
+				"path": "./snippets/datetime.code-snippets"
+			},
+			{
+				"language": "typescript",
+				"path": "./snippets/encoding.code-snippets"
+			},
+			{
+				"language": "typescript",
+				"path": "./snippets/encoding-test.code-snippets"
+			},
+			{
+				"language": "toml",
+				"path": "./snippets/toml/encoding-test.code-snippets"
+			},
+			{
+				"language": "typescript",
+				"path": "./snippets/io.code-snippets"
+			},
+			{
+				"language": "typescript",
+				"path": "./snippets/log.code-snippets"
+			},
+			{
+				"language": "typescript",
+				"path": "./snippets/mime.code-snippets"
+			},
+			{
+				"language": "typescript",
+				"path": "./snippets/node.code-snippets"
+			},
+			{
+				"language": "typescript",
+				"path": "./snippets/path.code-snippets"
+			},
+			{
+				"language": "typescript",
+				"path": "./snippets/signal.code-snippets"
+			},
+			{
+				"language": "typescript",
+				"path": "./snippets/testing.code-snippets"
+			},
+			{
+				"language": "typescript",
+				"path": "./snippets/textproto.code-snippets"
+			},
+			{
+				"language": "typescript",
+				"path": "./snippets/uuid.code-snippets"
+			},
+			{
+				"language": "typescript",
+				"path": "./snippets/ws.code-snippets"
+			}
+		]
+	},
+	"__metadata": {
+		"id": "0f2291d4-80c8-4eb1-a56c-ee8a283e4e82",
+		"publisherId": "2d2e598a-4ed9-4f5f-80ea-092e7dca505c",
+		"publisherDisplayName": "Laurence Bahiirwa"
+	}
+}

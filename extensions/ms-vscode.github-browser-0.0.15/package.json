@@ -1,0 +1,302 @@
+{
+	"name": "github-browser",
+	"private": true,
+	"displayName": "%displayName%",
+	"description": "%description%",
+	"publisher": "ms-vscode",
+	"version": "0.0.15",
+	"license": "SEE LICENSE IN LICENSE",
+	"engines": {
+		"vscode": "^1.49.0"
+	},
+	"browser": "./dist/browser/extension.js",
+	"main": "./dist/extension.js",
+	"repository": {},
+	"categories": [
+		"Other"
+	],
+	"enableProposedApi": true,
+	"preview": true,
+	"activationEvents": [
+		"onFileSystem:codespace",
+		"onFileSystem:github",
+		"onCommand:githubBrowser.openRepository",
+		"onCommand:githubBrowser.deleteAllLocalRepositoryData",
+		"onCommand:githubBrowser.deleteLocalRepositoryData"
+	],
+	"extensionKind": [
+		"web",
+		"ui"
+	],
+	"contributes": {
+		"configuration": {
+			"title": "GitHub Browser",
+			"properties": {
+				"github-browser.enableLocalDownload": {
+					"type": "boolean",
+					"default": false
+				},
+				"github-browser.localDownloadCorsProxy": {
+					"type": "string",
+					"default": ""
+				},
+				"github-browser.warnBeforeLocalDownload": {
+					"type": "boolean",
+					"default": true
+				}
+			}
+		},
+		"commands": [
+			{
+				"command": "githubBrowser.openRepository",
+				"title": "Open GitHub Repository...",
+				"category": "GitHub Browser"
+			},
+			{
+				"command": "githubBrowser.deleteAllLocalRepositoryData",
+				"title": "Delete All Local Repository Data",
+				"category": "GitHub Browser"
+			},
+			{
+				"command": "githubBrowser.deleteLocalRepositoryData",
+				"title": "Delete Local Repository Data",
+				"category": "GitHub Browser"
+			},
+			{
+				"command": "githubBrowser.commit",
+				"title": "Commit",
+				"icon": "$(check)",
+				"category": "GitHub Browser"
+			},
+			{
+				"command": "githubBrowser.discardAllChanges",
+				"title": "Discard All Changes",
+				"icon": "$(discard)",
+				"category": "GitHub Browser"
+			},
+			{
+				"command": "githubBrowser.discardChanges",
+				"title": "Discard Changes",
+				"icon": "$(discard)",
+				"category": "GitHub Browser"
+			},
+			{
+				"command": "githubBrowser.openChanges",
+				"title": "Open Changes",
+				"icon": "$(git-compare)",
+				"category": "GitHub Browser"
+			},
+			{
+				"command": "githubBrowser.openFile",
+				"title": "Open File",
+				"icon": "$(go-to-file)",
+				"category": "GitHub Browser"
+			},
+			{
+				"command": "githubBrowser.createPullRequest",
+				"title": "Create a Pull Request",
+				"icon": "$(git-pull-request)",
+				"category": "GitHub Browser"
+			},
+			{
+				"command": "githubBrowser.createDraftPullRequest",
+				"title": "Create a Draft Pull Request",
+				"icon": "$(git-pull-request)",
+				"category": "GitHub Browser"
+			}
+		],
+		"menus": {
+			"commandPalette": [
+				{
+					"command": "githubBrowser.openRepository",
+					"when": "!isWeb"
+				},
+				{
+					"command": "githubBrowser.commit",
+					"when": "githubBrowser:hasProviders"
+				},
+				{
+					"command": "githubBrowser.createPullRequest",
+					"when": "githubBrowser:hasProviders"
+				},
+				{
+					"command": "githubBrowser.createDraftPullRequest",
+					"when": "githubBrowser:hasProviders"
+				},
+				{
+					"command": "githubBrowser.deleteLocalRepositoryData",
+					"when": "config.github-browser.enableLocalDownload"
+				},
+				{
+					"command": "githubBrowser.deleteAllLocalRepositoryData",
+					"when": "config.github-browser.enableLocalDownload"
+				},
+				{
+					"command": "githubBrowser.discardAllChanges",
+					"when": "false"
+				},
+				{
+					"command": "githubBrowser.discardChanges",
+					"when": "false"
+				},
+				{
+					"command": "githubBrowser.openChanges",
+					"when": "false"
+				},
+				{
+					"command": "githubBrowser.openFile",
+					"when": "false"
+				}
+			],
+			"scm/title": [
+				{
+					"command": "githubBrowser.commit",
+					"group": "navigation@1",
+					"when": "scmProvider == github"
+				},
+				{
+					"submenu": "githubBrowser.prMenu",
+					"group": "navigation@2",
+					"when": "scmProvider == github"
+				}
+			],
+			"scm/resourceGroup/context": [
+				{
+					"command": "githubBrowser.discardAllChanges",
+					"when": "scmProvider == github && scmResourceGroup == github.changes",
+					"group": "inline@0"
+				},
+				{
+					"command": "githubBrowser.discardAllChanges",
+					"when": "scmProvider == github && scmResourceGroup == github.changes",
+					"group": "1_modification@0"
+				}
+			],
+			"scm/resourceState/context": [
+				{
+					"command": "githubBrowser.openFile",
+					"when": "scmProvider == github && scmResourceGroup == github.changes",
+					"group": "inline@0"
+				},
+				{
+					"command": "githubBrowser.discardChanges",
+					"when": "scmProvider == github && scmResourceGroup == github.changes",
+					"group": "inline@1"
+				},
+				{
+					"command": "githubBrowser.openChanges",
+					"when": "scmProvider == github && scmResourceGroup == github.changes",
+					"group": "navigation@0"
+				},
+				{
+					"command": "githubBrowser.openFile",
+					"when": "scmProvider == github && scmResourceGroup == github.changes",
+					"group": "navigation@1"
+				},
+				{
+					"command": "githubBrowser.discardChanges",
+					"when": "scmProvider == github && scmResourceGroup == github.changes",
+					"group": "1_modification@0"
+				}
+			],
+			"githubBrowser.prMenu": [
+				{
+					"command": "githubBrowser.createPullRequest",
+					"when": "scmProvider == github",
+					"group": "1_modification@0"
+				},
+				{
+					"command": "githubBrowser.createDraftPullRequest",
+					"when": "scmProvider == github",
+					"group": "1_modification@1"
+				}
+			]
+		},
+		"submenus": [
+			{
+				"id": "githubBrowser.prMenu",
+				"when": "scmProvider == github",
+				"icon": "$(git-pull-request)",
+				"label": "Pull Request"
+			}
+		],
+		"resourceLabelFormatters": [
+			{
+				"scheme": "github",
+				"authority": "*",
+				"formatting": {
+					"label": "${path}",
+					"separator": "/",
+					"workspaceSuffix": "GitHub",
+					"stripPathStartingSeparator": true
+				}
+			},
+			{
+				"scheme": "codespace",
+				"authority": "*",
+				"formatting": {
+					"label": "${path}",
+					"separator": "/",
+					"workspaceSuffix": "GitHub",
+					"stripPathStartingSeparator": true
+				}
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "yarn run bundle",
+		"bundle": "webpack --mode production --env esbuild",
+		"compile": "webpack --mode development --env esbuild",
+		"lint": "eslint --fix --cache --config .eslintrc.json --ignore-pattern src/env/browser/**/* src/**/*.ts",
+		"lint:browser": "eslint --fix --cache --cache-location .eslintcache.browser --config .eslintrc.browser.json --ignore-pattern src/env/node/**/* src/**/*.ts",
+		"package": "vsce package --yarn",
+		"pretty": "prettier --config .prettierrc --loglevel warn --write .",
+		"pub": "vsce publish --yarn --web --noVerify",
+		"update-dts": "pushd \"src/@types\" && npx vscode-dts dev && popd",
+		"update-dts:master": "pushd \"src/@types\" && npx vscode-dts master && popd",
+		"watch": "webpack --watch --mode development --env esbuild"
+	},
+	"dependencies": {
+		"@jkearl/tar": "1.0.4",
+		"@octokit/graphql": "4.6.0",
+		"@octokit/rest": "18.2.0",
+		"cross-fetch": "3.0.6",
+		"fuzzysort": "1.1.4",
+		"minimatch": "3.0.4",
+		"node-fetch": "3.0.0-beta.9",
+		"pako": "2.0.3",
+		"path-browserify": "1.0.1",
+		"rimraf": "3.0.2",
+		"vscode-nls": "5.0.0"
+	},
+	"devDependencies": {
+		"@types/minimatch": "^3.0.3",
+		"@types/node": "12.12.70",
+		"@types/pako": "1.0.1",
+		"@types/rimraf": "3.0.0",
+		"@types/vscode": "1.49.0",
+		"@typescript-eslint/eslint-plugin": "4.15.2",
+		"@typescript-eslint/parser": "4.15.2",
+		"esbuild-loader": "2.9.2",
+		"eslint": "7.20.0",
+		"eslint-cli": "1.1.1",
+		"eslint-config-prettier": "8.0.0",
+		"eslint-import-resolver-webpack": "0.13.0",
+		"eslint-plugin-import": "2.22.1",
+		"fork-ts-checker-webpack-plugin": "6.1.0",
+		"json5": "2.2.0",
+		"prettier": "2.2.1",
+		"terser-webpack-plugin": "5.1.1",
+		"ts-loader": "8.0.17",
+		"typescript": "4.2.1-rc",
+		"vsce": "1.85.0",
+		"vscode-nls-dev": "3.3.2",
+		"webpack": "5.24.0",
+		"webpack-cli": "4.2.0"
+	},
+	"__metadata": {
+		"id": "c1bcff4b-4ecb-466e-b8f6-b02788b5fb5a",
+		"publisherId": "5f5636e7-69ed-4afe-b5d6-8d231fb3d3ee",
+		"publisherDisplayName": "Microsoft"
+	}
+}

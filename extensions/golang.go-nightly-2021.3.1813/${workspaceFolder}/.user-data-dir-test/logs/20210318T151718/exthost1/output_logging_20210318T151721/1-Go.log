@@ -1,0 +1,121 @@
+Starting linting the current package at /home/runner/go/src/test/testfixture/linterTest
+Starting linting the current package at /home/runner/go/src/test/testfixture/linterTest
+/home/runner/go/src/test/testfixture/linterTest>Finished running tool: /usr/bin/sleep 2
+
+/home/runner/go/src/test/testfixture/linterTest>Finished running tool: /usr/bin/sleep 2
+
+Starting linting the current package at /home/runner/go/src/test/testfixture/linterTest
+/home/runner/go/src/test/testfixture/linterTest>Finished running tool: /home/runner/go/bin/staticcheck -checks all,-ST1000,-ST1016
+/home/runner/go/src/test/testfixture/linterTest/linter_1.go:1:1 should not use MixedCaps in package name; linterTest should be lintertest (ST1003)
+/home/runner/go/src/test/testfixture/linterTest/linter_1.go:13:6 possible nil pointer dereference (SA5011)
+/home/runner/go/src/test/testfixture/linterTest/linter_2.go:1:1 should not use MixedCaps in package name; linterTest should be lintertest (ST1003)
+/home/runner/go/src/test/testfixture/linterTest/linter_2.go:8:6 func secondFunc is unused (U1000)
+/home/runner/go/src/test/testfixture/linterTest/linter_2.go:9:20 unnecessary use of fmt.Sprint (S1039)
+
+Starting linting the current package at /home/runner/go/src/test/testfixture/errorsTest
+/home/runner/go/src/test/testfixture/errorsTest>Finished running tool: /home/runner/go/bin/staticcheck
+/home/runner/go/src/test/testfixture/errorsTest/errors.go:11:2 undeclared name: prin (compile)
+
+Generating Tests: /home/runner/go/bin/gotests -w -all /home/runner/go/src/test/generatetests/generatetests.go
+Generated Test_obj_String, Test_mainGenerating Tests: /home/runner/go/bin/gotests -w -only ^ObjString$ /home/runner/go/src/test/generatefunctiontest/generatetests.go
+Generated Test_obj_StringGenerating Tests: /home/runner/go/bin/gotests -w -all /home/runner/go/src/test/generatePackagetest
+Generated Test_obj_String, Test_mainStarting linting the current package at /tmp/legacy0v9Ier/testfixture/linterTest
+Starting linting the current package at /tmp/legacy0v9Ier/testfixture/linterTest
+/tmp/legacy0v9Ier/testfixture/linterTest>Finished running tool: /usr/bin/sleep 2
+
+/tmp/legacy0v9Ier/testfixture/linterTest>Finished running tool: /usr/bin/sleep 2
+
+Starting linting the current package at /tmp/legacy0v9Ier/testfixture/linterTest
+/tmp/legacy0v9Ier/testfixture/linterTest>Finished running tool: /home/runner/go/bin/staticcheck -checks all,-ST1000,-ST1016
+/tmp/legacy0v9Ier/testfixture/linterTest/linter_1.go:1:1 should not use MixedCaps in package name; linterTest should be lintertest (ST1003)
+/tmp/legacy0v9Ier/testfixture/linterTest/linter_1.go:13:6 possible nil pointer dereference (SA5011)
+/tmp/legacy0v9Ier/testfixture/linterTest/linter_2.go:1:1 should not use MixedCaps in package name; linterTest should be lintertest (ST1003)
+/tmp/legacy0v9Ier/testfixture/linterTest/linter_2.go:8:6 func secondFunc is unused (U1000)
+/tmp/legacy0v9Ier/testfixture/linterTest/linter_2.go:9:20 unnecessary use of fmt.Sprint (S1039)
+
+Starting linting the current package at /tmp/legacy0v9Ier/testfixture/errorsTest
+/tmp/legacy0v9Ier/testfixture/errorsTest>Finished running tool: /home/runner/go/bin/staticcheck
+/tmp/legacy0v9Ier/testfixture/errorsTest/errors.go:11:2 undeclared name: prin (compile)
+
+Generating Tests: /home/runner/go/bin/gotests -w -all /tmp/legacy0v9Ier/generatetests/generatetests.go
+Generated Test_obj_String, Test_mainGenerating Tests: /home/runner/go/bin/gotests -w -only ^ObjString$ /tmp/legacy0v9Ier/generatefunctiontest/generatetests.go
+Generated Test_obj_StringGenerating Tests: /home/runner/go/bin/gotests -w -all /tmp/legacy0v9Ier/generatePackagetest
+Generated Test_obj_String, Test_mainTools environment: GOPATH=/tmp/install-testxx0AWn:/tmp/install-test2SS0eBq
+Installing 1 tool at /tmp/install-testxx0AWn/bin:/tmp/install-test2SS0eBq/bin in module mode.
+  gopls
+
+Installing golang.org/x/tools/gopls@v1.0.1-pre.2 (/home/runner/go/bin/gopls) SUCCEEDED
+
+All tools successfully installed. You are ready to Go :).
+Tools environment: GOPATH=/tmp/install-test6hyibp:/tmp/install-test2ddgP0q
+Installing 3 tools at /tmp/install-test6hyibp/bin:/tmp/install-test2ddgP0q/bin in module mode.
+  gopls
+  guru
+  dlv-dap
+
+Installing golang.org/x/tools/gopls@v1.0.0 (/home/runner/go/bin/gopls) SUCCEEDED
+Installing golang.org/x/tools/cmd/guru (guru) SUCCEEDED
+Installing github.com/go-delve/delve/cmd/dlv@master (dlv-dap) SUCCEEDED
+
+All tools successfully installed. You are ready to Go :).
+Tools environment: GOPATH=/tmp/install-testl8uyPo:/tmp/install-test2vmAgwo
+Installing 28 tools at /tmp/install-testl8uyPo/bin:/tmp/install-test2vmAgwo/bin in module mode.
+  gocode
+  gocode-gomod
+  gopkgs
+  go-outline
+  go-symbols
+  guru
+  gorename
+  gomodifytags
+  goplay
+  impl
+  gotype-live
+  godef
+  gogetdoc
+  gofumports
+  gofumpt
+  goimports
+  goreturns
+  goformat
+  gotests
+  golint
+  staticcheck
+  golangci-lint
+  revive
+  gopls
+  dlv
+  dlv-dap
+  fillstruct
+  godoctor
+
+Installing github.com/mdempsky/gocode (/home/runner/go/bin/gocode) SUCCEEDED
+Installing github.com/stamblerre/gocode (/home/runner/go/bin/gocode-gomod) SUCCEEDED
+Installing github.com/uudashr/gopkgs/v2/cmd/gopkgs (/home/runner/go/bin/gopkgs) SUCCEEDED
+Installing github.com/ramya-rao-a/go-outline (/home/runner/go/bin/go-outline) SUCCEEDED
+Installing github.com/acroca/go-symbols (/home/runner/go/bin/go-symbols) SUCCEEDED
+Installing golang.org/x/tools/cmd/guru (guru) SUCCEEDED
+Installing golang.org/x/tools/cmd/gorename (/home/runner/go/bin/gorename) SUCCEEDED
+Installing github.com/fatih/gomodifytags (gomodifytags) SUCCEEDED
+Installing github.com/haya14busa/goplay/cmd/goplay (/home/runner/go/bin/goplay) SUCCEEDED
+Installing github.com/josharian/impl (impl) SUCCEEDED
+Installing github.com/tylerb/gotype-live (gotype-live) SUCCEEDED
+Installing github.com/rogpeppe/godef (/home/runner/go/bin/godef) SUCCEEDED
+Installing github.com/zmb3/gogetdoc (/home/runner/go/bin/gogetdoc) SUCCEEDED
+Installing mvdan.cc/gofumpt/gofumports (gofumports) SUCCEEDED
+Installing mvdan.cc/gofumpt (gofumpt) SUCCEEDED
+Installing golang.org/x/tools/cmd/goimports (goimports) SUCCEEDED
+Installing github.com/sqs/goreturns (/home/runner/go/bin/goreturns) SUCCEEDED
+Installing winterdrache.de/goformat/goformat (goformat) SUCCEEDED
+Installing github.com/cweill/gotests/gotests (/home/runner/go/bin/gotests) SUCCEEDED
+Installing golang.org/x/lint/golint (golint) SUCCEEDED
+Installing honnef.co/go/tools/cmd/staticcheck (/home/runner/go/bin/staticcheck) SUCCEEDED
+Installing github.com/golangci/golangci-lint/cmd/golangci-lint (golangci-lint) SUCCEEDED
+Installing github.com/mgechev/revive (revive) SUCCEEDED
+Installing golang.org/x/tools/gopls@v0.6.8 (/home/runner/go/bin/gopls) SUCCEEDED
+Installing github.com/go-delve/delve/cmd/dlv (/home/runner/go/bin/dlv) SUCCEEDED
+Installing github.com/go-delve/delve/cmd/dlv@master (dlv-dap) SUCCEEDED
+Installing github.com/davidrjenni/reftools/cmd/fillstruct (/home/runner/go/bin/fillstruct) SUCCEEDED
+Installing github.com/godoctor/godoctor (godoctor) SUCCEEDED
+
+All tools successfully installed. You are ready to Go :).

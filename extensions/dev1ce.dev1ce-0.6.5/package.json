@@ -1,0 +1,47 @@
+{
+	"name": "dev1ce",
+	"displayName": "Dark One",
+	"description": "Best Theme For Dark Mode",
+	"version": "0.6.5",
+	"engines": {
+		"vscode": "^1.44.0"
+	},
+	"galleryBanner": {
+		"color": "#23262E",
+		"theme": "dark"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/Accel-Byte/Dark-One.git"
+	},
+	"icon": "Images/logoRound.png",
+	"categories": [
+		"Themes"
+	],
+	"contributes": {
+		"themes": [
+			{
+				"label": "Dark One",
+				"uiTheme": "vs-dark",
+				"path": "./themes/dev1ce-color-theme.json"
+			}
+		]
+	},
+	"keywords": [
+		"vscode",
+		"Theme",
+		"Dark One",
+		"Dark",
+		"Onedark",
+		"Monokai",
+		"Dark+",
+		"semantic"
+	],
+	"publisher": "dev1ce",
+	"license": "MIT",
+	"__metadata": {
+		"id": "09fba5e5-55b7-4e7d-a4b2-4409cb80a9ae",
+		"publisherId": "81ecff75-f308-427e-b3f6-59c80cd34c93",
+		"publisherDisplayName": "dev1ce"
+	}
+}

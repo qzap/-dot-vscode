@@ -1,0 +1,28 @@
+{
+	"name": "theme-symfony-dark",
+	"displayName": "Symfony Dark Theme",
+	"icon": "icon.png",
+	"description": "Theme based on the documentation syntax of the Symfony PHP framework.",
+	"version": "0.1.0",
+	"publisher": "ntb",
+	"engines": {
+		"vscode": "^0.10.10"
+	},
+	"categories": [
+		"Themes"
+	],
+	"contributes": {
+		"themes": [
+			{
+				"label": "Symfony Dark",
+				"uiTheme": "vs-dark",
+				"path": "./themes/Merbivore.tmTheme"
+			}
+		]
+	},
+	"__metadata": {
+		"id": "6d97541e-8092-4202-9cdf-29e185667696",
+		"publisherId": "34f72f43-8de5-4d47-9942-06794365a32b",
+		"publisherDisplayName": "ntb"
+	}
+}

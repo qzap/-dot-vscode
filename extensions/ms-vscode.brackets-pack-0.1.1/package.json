@@ -1,0 +1,35 @@
+{
+	"name": "brackets-pack",
+	"displayName": "Brackets Extension Pack",
+	"description": "Popular Brackets features as extensions for VS Code.",
+	"version": "0.1.1",
+	"publisher": "ms-vscode",
+	"engines": {
+		"vscode": "^1.51.0"
+	},
+	"categories": [
+		"Extension Packs"
+	],
+	"keywords": [
+		"brackets"
+	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/Microsoft/vscode-brackets-pack.git"
+	},
+	"bugs": {
+		"url": "https://github.com/Microsoft/vscode-brackets-pack/issues"
+	},
+	"icon": "brackets-logo.png",
+	"extensionPack": [
+		"ms-vscode.brackets-keybindings",
+		"ritwickdey.LiveServer",
+		"Zignd.html-css-class-completion",
+		"pranaygp.vscode-css-peek"
+	],
+	"__metadata": {
+		"id": "42e46dd6-3444-4b25-be5c-ddd5ecf2baa7",
+		"publisherId": "5f5636e7-69ed-4afe-b5d6-8d231fb3d3ee",
+		"publisherDisplayName": "Microsoft"
+	}
+}

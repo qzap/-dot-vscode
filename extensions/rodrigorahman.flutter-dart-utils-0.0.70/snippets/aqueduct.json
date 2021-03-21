@@ -1,0 +1,30 @@
+{
+	"aqueduct-create-operation": {
+		"prefix": "fu-aqu-operation",
+		"body": [
+			"@Operation.$1($2)",
+			"Future<Response> $3($4) async {",
+			"  return Response.ok({});",
+			"}"
+		]
+	},
+	"aqueduct-create-serialization": {
+		"prefix": "fu-aqu-serializable",
+		"body": [
+			"import 'package:aqueduct/aqueduct.dart';",
+			"",
+			"class ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}} extends Serializable {",
+			"  @override",
+			"  Map<String, dynamic> asMap() {",
+			"    return {};",
+			"  }",
+			"",
+			"  @override",
+			"  void readFromMap(Map<String, dynamic> object) {",
+			"    ",
+			"  }",
+			"}"
+		]
+	}
+	
+}

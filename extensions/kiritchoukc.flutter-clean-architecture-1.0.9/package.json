@@ -1,0 +1,95 @@
+{
+	"name": "flutter-clean-architecture",
+	"displayName": "Flutter Feature Scaffolding",
+	"description": "Add new feature easily with well structured directories (Clean Architecture pattern)",
+	"version": "1.0.9",
+	"publisher": "KiritchoukC",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/KiritchoukC/vscode-ext_flutter-clean-architecture"
+	},
+	"license": "MIT",
+	"engines": {
+		"vscode": "^1.31.0"
+	},
+	"categories": [
+		"Programming Languages"
+	],
+	"keywords": [
+		"clean-architecture",
+		"dart",
+		"flutter",
+		"bloc",
+		"state-management"
+	],
+	"icon": "assets/logo.png",
+	"activationEvents": [
+		"onCommand:extension.new-feature",
+		"workspaceContains:**/pubspec.yaml"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "extension.new-feature",
+				"title": "New Feature",
+				"category": "Flutter Clean Architecture",
+				"icon": "assets/logo.png"
+			}
+		],
+		"menus": {
+			"explorer/context": [
+				{
+					"command": "extension.new-feature",
+					"group": "cleanArchitectureGroup@1",
+					"when": "explorerResourceIsFolder"
+				}
+			]
+		}
+	},
+	"scripts": {
+		"vscode:prepublish": "yarn run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"pretest": "yarn run compile",
+		"test": "node ./out/test/runTest.js",
+		"deploy": "vsce publish --yarn"
+	},
+	"devDependencies": {
+		"@types/change-case": "^2.3.1",
+		"@types/glob": "^7.1.1",
+		"@types/js-yaml": "^3.12.1",
+		"@types/lodash": "^4.14.121",
+		"@types/mkdirp": "^0.5.2",
+		"@types/mocha": "^5.2.6",
+		"@types/node": "^12.7.8",
+		"@types/rimraf": "^2.0.2",
+		"@types/semver": "^6.0.2",
+		"@types/vscode": "^1.31.0",
+		"cz-conventional-changelog": "^3.0.2",
+		"glob": "^7.1.4",
+		"mocha": "^6.1.4",
+		"tslint": "^5.12.1",
+		"typescript": "^3.3.1",
+		"vsce": "^1.81.1",
+		"vscode-test": "^1.2.0"
+	},
+	"dependencies": {
+		"change-case": "^3.1.0",
+		"cz-conventional-changelog": "^3.0.2",
+		"js-yaml": "^3.13.1",
+		"lodash": "^4.17.19",
+		"mkdirp": "^0.5.1",
+		"semver": "^6.3.0"
+	},
+	"config": {
+		"commitizen": {
+			"path": "./node_modules/cz-conventional-changelog"
+		}
+	},
+	"__metadata": {
+		"id": "0f3e4e30-7fab-4d4a-b22e-2ee9987e17cc",
+		"publisherId": "edadbbdc-259a-427c-946f-11f93f34d597",
+		"publisherDisplayName": "KiritchoukC"
+	}
+}

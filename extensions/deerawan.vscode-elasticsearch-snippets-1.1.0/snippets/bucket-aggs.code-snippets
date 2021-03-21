@@ -1,0 +1,143 @@
+{
+  "Elasticsearch Aggs Children": {
+    "prefix": "es-agg-children",
+    "description": "Elasticsearch aggregations children",
+    "body": "{ children: { type: '${1:fieldName}' }}",
+    "scope": "javascript,typescript,es"
+  },
+  "Elasticsearch Aggs Date Histogram": {
+    "prefix": "es-agg-date-histogram",
+    "description": "Elasticsearch aggregations date histogram",
+    "body": [
+      "{",
+      "\tdate_histogram: {",
+      "\t\tfield: '${1:fieldName}',",
+      "\t\tinterval: '${2:month}',",
+      "\t\tformat: '${3:yyyy-MM-dd}',",
+      "\t}",
+      "}"
+    ],
+    "scope": "javascript,typescript,es"
+  },
+  "Elasticsearch Aggs Date Range": {
+    "prefix": "es-agg-date-range",
+    "description": "Elasticsearch aggregations date range",
+    "body": [
+      "{",
+      "\tdate_range: {",
+      "\t\tfield: '${1:fieldName}',",
+      "\t\tformat: '${2:yyyy-MM-dd}',",
+      "\t\tranges: [",
+      "\t\t\t{ from: '${3:now-10M/M}' },",
+      "\t\t\t{ to: '${4:now-10M/M}' },",
+      "\t\t],",
+      "\t}",
+      "}",  
+    ],
+    "scope": "javascript,typescript,es"
+  },
+  "Elasticsearch Aggs Diversified Sampler": {
+    "prefix": "es-agg-div-sampler",
+    "description": "Elasticsearch aggregations diversified sampler",
+    "body": "{ diversified_sampler: { type: '${1:fieldName}', shard_size: ${2:200} }}",
+    "scope": "javascript,typescript,es"
+  },
+  "Elasticsearch Aggs Geo Distance": {
+    "prefix": "es-agg-geodistance",
+    "description": "Elasticsearch aggregations geo distance",
+    "body": [
+      "{",
+      "\tgeo_distance: {",
+      "\t\tfield: '${1:fieldName}',",
+      "\t\torigin: '${2:52.3760, 4.894}',",
+      "\t\tranges: [",
+        "\t\t\t{ from: ${3:100} },",
+        "\t\t\t{ to: ${4:200} },",
+        "\t\t],",
+      "\t}",
+      "}"
+    ],
+    "scope": "javascript,typescript,es"
+  },
+  "Elasticsearch Aggs Geohash Grid": {
+    "prefix": "es-agg-geohash-grid",
+    "description": "Elasticsearch aggregations geohash grid",
+    "body": "{ geohash_grid: { field: '${1:fieldName}', precision: ${2:3} }}",
+    "scope": "javascript,typescript,es"
+  },
+  "Elasticsearch Aggs Global": {
+    "prefix": "es-agg-global",
+    "description": "Elasticsearch aggregations global",
+    "body": "{ global: {}}",
+    "scope": "javascript,typescript,es"
+  },
+  "Elasticsearch Aggs Histogram": {
+    "prefix": "es-agg-histogram",
+    "description": "Elasticsearch aggregations histogram",
+    "body": "{ histogram: { field: '${1:fieldName}', interval: ${2:50} }}",
+    "scope": "javascript,typescript,es"
+  },
+  "Elasticsearch Aggs IP Range": {
+    "prefix": "es-agg-iprange",
+    "description": "Elasticsearch aggregations IP range",
+    "body": [
+      "{",
+      "\tip_range: {",
+      "\t\tfield: '${1:fieldName}',",      
+      "\t\tranges: [",
+        "\t\t\t{ from: '${2:10.0.0.5}' },",
+        "\t\t\t{ to: '${3:10.0.0.5}' },",
+        "\t\t],",
+      "\t}",
+      "}"
+    ],
+    "scope": "javascript,typescript,es"
+  },
+  "Elasticsearch Aggs Missing": {
+    "prefix": "es-agg-missing",
+    "description": "Elasticsearch aggregations missing",
+    "body": "{ missing: { field: '${1:fieldName}' }}",
+    "scope": "javascript,typescript,es"
+  },
+  "Elasticsearch Aggs Nested": {
+    "prefix": "es-agg-nested",
+    "description": "Elasticsearch aggregations nested",
+    "body": "{ nested: { path: '${1:path}' }}",
+    "scope": "javascript,typescript,es"
+  },
+  "Elasticsearch Aggs Range": {
+    "prefix": "es-agg-range",
+    "description": "Elasticsearch aggregations range",
+    "body": [
+      "{",
+      "\trange: {",
+      "\t\tfield: '${1:fieldName}',",      
+      "\t\tranges: [",
+        "\t\t\t{ from: '${2:50}' },",        
+        "\t\t\t{ from: '${3:50}', to: '${4:100}' },",        
+        "\t\t\t{ to: '${5:100}' },",
+        "\t\t],",
+      "\t}",
+      "}"
+    ],
+    "scope": "javascript,typescript,es"
+  },
+  "Elasticsearch Aggs Reverse Nested": {
+    "prefix": "es-agg-reverse-nested",
+    "description": "Elasticsearch aggregations reverse nested",
+    "body": "{ reverse_nested: {}}",
+    "scope": "javascript,typescript,es"
+  },
+  "Elasticsearch Aggs Significant Terms": {
+    "prefix": "es-agg-sig-terms",
+    "description": "Elasticsearch aggregations significant terms",
+    "body": "{ significant_terms: { field: '${1:fieldName}' }}",
+    "scope": "javascript,typescript,es"
+  },
+  "Elasticsearch Aggs Terms": {
+    "prefix": "es-agg-terms",
+    "description": "Elasticsearch aggregations terms",
+    "body": "{ terms: { field: '${1:fieldName}' }}",
+    "scope": "javascript,typescript,es"
+  },
+}

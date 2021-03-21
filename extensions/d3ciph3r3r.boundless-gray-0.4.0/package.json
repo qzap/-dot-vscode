@@ -1,0 +1,38 @@
+{
+	"publisher": "d3ciph3r3r",
+	"name": "boundless-gray",
+	"displayName": "Boundless gray (Theme)",
+	"description": "Simple dark gray theme",
+	"version": "0.4.0",
+	"engines": {
+		"vscode": "^1.42.0"
+	},
+	"keywords": [
+		"theme",
+		"dark",
+		"simple"
+	],
+	"categories": [
+		"Themes"
+	],
+	"repository": {},
+	"contributes": {
+		"themes": [
+			{
+				"label": "Boundless Gray",
+				"uiTheme": "vs-dark",
+				"path": "./themes/Boundless Gray-color-theme.json"
+			},
+			{
+				"label": "Boundless Gray lighter",
+				"uiTheme": "vs-dark",
+				"path": "./themes/Boundless Gray-color-theme-lighter.json"
+			}
+		]
+	},
+	"__metadata": {
+		"id": "0ca13837-831c-4be5-a8a5-4b7b1d511d1b",
+		"publisherId": "9a91a701-55cb-478f-a16d-3323ce9e6fd1",
+		"publisherDisplayName": "d3ciph3r3r"
+	}
+}

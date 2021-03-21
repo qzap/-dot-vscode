@@ -1,0 +1,65 @@
+{
+	"name": "vscode-import-formatter",
+	"displayName": "ES6 Import Formatter",
+	"description": "Sort the leading imports/requires for ES6.",
+	"version": "0.1.8",
+	"icon": "icon.png",
+	"publisher": "henry-li",
+	"keywords": [
+		"sort",
+		"import",
+		"require",
+		"format",
+		"es6"
+	],
+	"engines": {
+		"vscode": "^1.16.0"
+	},
+	"categories": [
+		"Formatters"
+	],
+	"activationEvents": [
+		"onLanguage:javascript"
+	],
+	"main": "./index",
+	"contributes": {
+		"commands": [
+			{
+				"command": "importFormatter.format",
+				"title": "Sort imports/requires"
+			}
+		],
+		"menus": {
+			"editor/context": [
+				{
+					"when": "resourceLangId == javascript",
+					"command": "importFormatter.format",
+					"group": "1_modification"
+				}
+			]
+		},
+		"keybindings": [
+			{
+				"when": "resourceLangId == javascript",
+				"command": "importFormatter.format",
+				"key": "ctrl+alt+s",
+				"mac": "cmd+alt+s"
+			}
+		]
+	},
+	"scripts": {
+		"postinstall": "node ./node_modules/vscode/bin/install"
+	},
+	"devDependencies": {
+		"typescript": "^2.5.2",
+		"vscode": "^1.1.5",
+		"eslint": "^4.6.1",
+		"@types/node": "^7.0.0",
+		"@types/mocha": "^2.2.42"
+	},
+	"__metadata": {
+		"id": "b7166aa4-427f-458f-9d2e-0e7ce4740190",
+		"publisherId": "578a68db-823d-47ae-b097-89a5f604ed2c",
+		"publisherDisplayName": "Henry Li"
+	}
+}

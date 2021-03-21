@@ -1,0 +1,29 @@
+{
+	"name": "dark-theme-github",
+	"displayName": "Dark Github Theme",
+	"description": "GitHub Dark Theme for Visual Studio Code",
+	"icon": "icon.png",
+	"version": "2.0.0",
+	"publisher": "xmorse",
+	"repository": "https://github.com/remorses/dark-github-theme",
+	"engines": {
+		"vscode": "*"
+	},
+	"categories": [
+		"Themes"
+	],
+	"contributes": {
+		"themes": [
+			{
+				"label": "Dark Github",
+				"uiTheme": "vs-dark",
+				"path": "./themes/dark-github.json"
+			}
+		]
+	},
+	"__metadata": {
+		"id": "c947b1c8-da91-4bff-ad56-1412e71de4ad",
+		"publisherId": "4e0fe52c-143e-4529-bdbe-7dbbcc2eb7fe",
+		"publisherDisplayName": "xmorse"
+	}
+}

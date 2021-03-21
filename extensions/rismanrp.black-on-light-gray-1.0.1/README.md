@@ -1,0 +1,3 @@
+Not exactly two colors, but you get the point. I think too many colors in thousand lines of codes a little nauseating, maybe you too would find this useful. Sorry for the lack of screenshots and icon.
+
+This theme is not going to be maintained, this was only for my learning purpose. For similar (but better) theme, I recommend this one -> https://marketplace.visualstudio.com/items?itemName=be5invis.theme-verdandi

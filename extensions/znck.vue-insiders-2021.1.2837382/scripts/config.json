@@ -1,0 +1,26 @@
+{
+  "template": {
+    "default": "vue-html",
+    "allowed": ["pug"]
+  },
+  "preview": {
+    "default": "vue-html",
+    "allowed": []
+  },
+  "docs": {
+    "default": "markdown",
+    "allowed": ["asciidoc", "text"]
+  },
+  "i18n": {
+    "default": "json",
+    "allowed": ["yaml"]
+  },
+  "script": {
+    "default": "javascript",
+    "allowed": ["typescript"]
+  },
+  "style": {
+    "default": "css",
+    "allowed": ["sass", "scss", "less", "postcss", "stylus"]
+  }
+}

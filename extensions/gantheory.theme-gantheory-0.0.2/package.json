@@ -1,0 +1,37 @@
+{
+	"name": "theme-gantheory",
+	"displayName": "Gantheory Theme",
+	"description": "Dark Theme based on Dark Gray (Code:Blocks), Pikacode (Vim), and Dark+ (Visual Studio Code)",
+	"version": "0.0.2",
+	"publisher": "gantheory",
+	"author": {
+		"name": "Shun-Yao Shih",
+		"email": "shunyaoshih@gmail.com"
+	},
+	"icon": "images/icon.png",
+	"homepage": "https://github.com/gantheory/vscode-theme-gantheory",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/gantheory/vscode-theme-gantheory.git"
+	},
+	"engines": {
+		"vscode": "^1.17.0"
+	},
+	"categories": [
+		"Themes"
+	],
+	"contributes": {
+		"themes": [
+			{
+				"label": "Gantheory",
+				"uiTheme": "vs-dark",
+				"path": "./themes/theme.json"
+			}
+		]
+	},
+	"__metadata": {
+		"id": "ae74c483-06cc-4de9-9f99-f1088fd22a98",
+		"publisherId": "7044b2cb-0a7d-4ca4-85b2-0fd22fac3d23",
+		"publisherDisplayName": "gantheory"
+	}
+}

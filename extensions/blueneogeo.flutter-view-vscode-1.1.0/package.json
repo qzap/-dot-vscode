@@ -1,0 +1,40 @@
+{
+	"name": "flutter-view-vscode",
+	"displayName": "flutter-view-vscode",
+	"description": "Flutter-View tooling extension",
+	"version": "1.1.0",
+	"publisher": "blueneogeo",
+	"repository": {
+		"url": "https://github.com/flutter-view/flutter-view-vscode",
+		"type": "git"
+	},
+	"engines": {
+		"vscode": "^1.27.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"workspaceContains:**/*.pug"
+	],
+	"main": "./out/extension",
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"postinstall": "node ./node_modules/vscode/bin/install",
+		"test": "npm run compile && node ./node_modules/vscode/bin/test"
+	},
+	"devDependencies": {
+		"typescript": "^2.6.1",
+		"vscode": "^1.1.6",
+		"tslint": "^5.8.0",
+		"@types/node": "^7.0.43",
+		"@types/mocha": "^2.2.42"
+	},
+	"__metadata": {
+		"id": "d43f6bf0-370f-4b2f-b236-594516dd0a64",
+		"publisherId": "eb73b9d8-c74e-4aca-9e1a-4ff4cd929670",
+		"publisherDisplayName": "blueneogeo"
+	}
+}

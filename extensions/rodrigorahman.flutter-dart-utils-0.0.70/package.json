@@ -1,0 +1,209 @@
+{
+	"name": "flutter-dart-utils",
+	"displayName": "Flutter & Dart Utilities",
+	"description": "Flutter & Dart Utilities, Clean Architecture Helper",
+	"publisher": "RodrigoRahman",
+	"version": "0.0.70",
+	"bugs": {
+		"url": "https://github.com/rodrigorahman/flutter-dart-utils-vscode/issues",
+		"email": "rodrigorahman@gmail.com"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/rodrigorahman/flutter-dart-utils-vscode"
+	},
+	"engines": {
+		"vscode": "^1.46.0"
+	},
+	"keywords": [
+		"dart",
+		"flutter",
+		"clean architecture"
+	],
+	"categories": [
+		"Snippets",
+		"Programming Languages"
+	],
+	"activationEvents": [
+		"onCommand:extension.clean-architecture-folders",
+		"workspaceContains:**/pubspec.yaml"
+	],
+	"main": "./src/extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "extension.clean-architecture-folders",
+				"title": "Clean Arch.: New Feature Backend "
+			},
+			{
+				"command": "extension.clean-architecture-folders-for-flutter",
+				"title": "Clean Arch.: New Feature Flutter "
+			},
+			{
+				"command": "extension.3-tiers",
+				"title": "3-Tiers Back: New Feature "
+			},
+			{
+				"command": "extension.mvc-feature",
+				"title": "MVC: New Feature "
+			},
+			{
+				"command": "extension.generateTestFile",
+				"title": "Generate Test Folder"
+			},
+			{
+				"command": "extension.generateInterface",
+				"title": "Create Dart Interface"
+			},
+			{
+				"command": "extension.generateClass",
+				"title": "Create Dart Class"
+			},
+			{
+				"command": "extension.implementsInterface",
+				"title": "Implements interface"
+			},
+			{
+				"command": "extension.fu-wrap-with-value-notifier",
+				"title": "Wrap with ValueListenableBuilder"
+			},
+			{
+				"command": "extension.fu-wrap-with-consumer",
+				"title": "Wrap with Consumer"
+			},
+			{
+				"command": "extension.fu-wrap-with-observer",
+				"title": "Wrap with Mobx Observer"
+			}
+		],
+		"menus": {
+			"explorer/context": [
+				{
+					"when": "explorerResourceIsFolder",
+					"command": "extension.generateClass",
+					"group": "1_modification@1"
+				},
+				{
+					"when": "explorerResourceIsFolder",
+					"command": "extension.generateInterface",
+					"group": "1_modification@2"
+				},
+				{
+					"when": "explorerResourceIsFolder",
+					"command": "extension.3-tiers",
+					"group": "1_modification@3"
+				},
+				{
+					"when": "explorerResourceIsFolder",
+					"command": "extension.mvc-feature",
+					"group": "1_modification@3"
+				},
+				{
+					"when": "explorerResourceIsFolder",
+					"command": "extension.clean-architecture-folders",
+					"group": "1_modification@4"
+				},
+				{
+					"when": "explorerResourceIsFolder",
+					"command": "extension.clean-architecture-folders-for-flutter",
+					"group": "1_modification@5"
+				},
+				{
+					"when": "explorerResourceIsFolder",
+					"command": "extension.generateTestFile",
+					"group": "1_modification@6"
+				},
+				{
+					"command": "extension.implementsInterface",
+					"when": "editorLangId == dart"
+				}
+			],
+			"commandPalette": [
+				{
+					"command": "extension.fu-wrap-with-value-notifier",
+					"when": "editorLangId == dart"
+				},
+				{
+					"command": "extension.fu-wrap-with-consumer",
+					"when": "editorLangId == dart"
+				},
+				{
+					"command": "extension.fu-wrap-with-observer",
+					"when": "editorLangId == dart"
+				}
+			]
+		},
+		"snippets": [
+			{
+				"language": "dart",
+				"path": "./snippets/dart.json"
+			},
+			{
+				"language": "dart",
+				"path": "./snippets/modular.json"
+			},
+			{
+				"language": "dart",
+				"path": "./snippets/modular_3.json"
+			},
+			{
+				"language": "dart",
+				"path": "./snippets/cubit.json"
+			},
+			{
+				"language": "dart",
+				"path": "./snippets/flutter_bloc.json"
+			},
+			{
+				"language": "dart",
+				"path": "./snippets/aqueduct.json"
+			},
+			{
+				"language": "dart",
+				"path": "./snippets/shelf.json"
+			},
+			{
+				"language": "dart",
+				"path": "./snippets/flutter.json"
+			},
+			{
+				"language": "dart",
+				"path": "./snippets/mockito.json"
+			},
+			{
+				"language": "dart",
+				"path": "./snippets/provider.json"
+			},
+			{
+				"language": "dart",
+				"path": "./snippets/getx.json"
+			}
+		]
+	},
+	"scripts": {
+		"lint": "eslint .",
+		"pretest": "npm run lint",
+		"test": "node ./test/runTest.js"
+	},
+	"devDependencies": {
+		"@types/glob": "^7.1.1",
+		"@types/mocha": "^7.0.2",
+		"@types/node": "^13.11.0",
+		"@types/vscode": "^1.46.0",
+		"eslint": "^6.8.0",
+		"glob": "^7.1.6",
+		"mkdirp": "^1.0.4",
+		"mocha": "^7.1.1",
+		"typescript": "^3.8.3",
+		"vscode-test": "^1.3.0"
+	},
+	"dependencies": {
+		"lodash": "^4.17.19",
+		"mkdirp": "^1.0.4"
+	},
+	"__metadata": {
+		"id": "0130041b-4816-4ffd-a381-1e5c99982f27",
+		"publisherId": "e6704f48-ca30-45b1-9c08-b6d27dbe8267",
+		"publisherDisplayName": "Rodrigo Rahman"
+	}
+}

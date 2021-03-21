@@ -1,0 +1,39 @@
+{
+	"name": "svelte-dark",
+	"displayName": "Svelte Dark",
+	"description": "A dark version of the Svelte framework color scheme",
+	"version": "0.0.6",
+	"keywords": [
+		"theme",
+		"svelte",
+		"javascript",
+		"typescript",
+		"html"
+	],
+	"publisher": "NickScialli",
+	"engines": {
+		"vscode": "^1.0.0"
+	},
+	"categories": [
+		"Themes"
+	],
+	"repository": {
+		"url": "https://github.com/nas5w/svelte-dark"
+	},
+	"icon": "icon.png",
+	"license": "MIT",
+	"contributes": {
+		"themes": [
+			{
+				"label": "Svelte Dark",
+				"uiTheme": "vs-dark",
+				"path": "./themes/Svelte Dark-color-theme.json"
+			}
+		]
+	},
+	"__metadata": {
+		"id": "78dd796f-7f32-4db0-8ea2-dd349997c152",
+		"publisherId": "6dff7de5-d651-4dbc-82b1-5dc71aedb040",
+		"publisherDisplayName": "Nick Scialli"
+	}
+}

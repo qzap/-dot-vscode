@@ -1,0 +1,104 @@
+{
+	"name": "hacky-es6-template-strings",
+	"displayName": "Hacky ES6 Template Strings",
+	"description": "Syntax highlighting in es6 template strings",
+	"version": "0.0.3",
+	"publisher": "A-Hjerpe",
+	"icon": "docs/logo.png",
+	"engines": {
+		"vscode": "^1.19.0"
+	},
+	"galleryBanner": {
+		"color": "#dedede",
+		"theme": "light"
+	},
+	"repository": {
+		"url": "https://github.com/AdamHjerpe/hacky-es6-template-strings"
+	},
+	"bugs": {
+		"url": "https://github.com/AdamHjerpe/hacky-es6-template-strings/issues"
+	},
+	"main": "./scripts/main",
+	"categories": [
+		"Languages"
+	],
+	"keywords": [
+		"javascript",
+		"es6",
+		"es6-string-html",
+		"html",
+		"sql"
+	],
+	"activationEvents": [
+		"onCommand:es6stringhtml.insertComment",
+		"onCommand:es6stringhtml.insertTemplate"
+	],
+	"contributes": {
+		"commands": [
+			{
+				"command": "es6stringhtml.insertComment",
+				"title": "Insert es6-string-html comment",
+				"category": "HTML"
+			},
+			{
+				"command": "es6stringhtml.insertTemplate",
+				"title": "Insert es6-string-html template",
+				"category": "HTML"
+			}
+		],
+		"grammars": [
+			{
+				"injectTo": [
+					"source.js",
+					"source.js.jsx",
+					"source.jsx",
+					"source.ts",
+					"source.tsx",
+					"source.sql",
+					"text.html.basic"
+				],
+				"scopeName": "inline.es6-js-injection",
+				"path": "./syntaxes/es6-js-injection.json",
+				"embeddedLanguages": {
+					"meta.template.expression.ts": "typescript",
+					"meta.template.expression.js": "javascript"
+				}
+			},
+			{
+				"injectTo": [
+					"source.js",
+					"source.js.jsx",
+					"source.jsx",
+					"source.ts",
+					"source.tsx",
+					"text.html.basic"
+				],
+				"scopeName": "inline.es6-html",
+				"path": "./syntaxes/es6-inline-html.json",
+				"embeddedLanguages": {
+					"meta.embedded.block.html": "html"
+				}
+			},
+			{
+				"injectTo": [
+					"source.js",
+					"source.js.jsx",
+					"source.jsx",
+					"source.ts",
+					"source.tsx",
+					"source.sql"
+				],
+				"scopeName": "inline.es6-sql",
+				"path": "./syntaxes/es6-inline-sql.json",
+				"embeddedLanguages": {
+					"meta.embedded.sql": "sql"
+				}
+			}
+		]
+	},
+	"__metadata": {
+		"id": "e8d1fcd1-0221-4a37-8b4f-d332d86fc182",
+		"publisherId": "bb733b69-df38-4ca3-a407-c0d4d3879366",
+		"publisherDisplayName": "A-Hjerpe"
+	}
+}

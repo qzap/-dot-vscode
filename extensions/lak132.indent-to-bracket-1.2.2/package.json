@@ -1,0 +1,60 @@
+{
+	"name": "indent-to-bracket",
+	"displayName": "Indent To Bracket",
+	"description": "Indents new lines to the last open bracket / parenthesis",
+	"version": "1.2.2",
+	"publisher": "LAK132",
+	"engines": {
+		"vscode": "^1.20.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"*"
+	],
+	"main": "./out/extension",
+	"contributes": {
+		"configuration": {
+			"title": "Indent to bracket",
+			"properties": {
+				"indent-to-bracket.useDefaultIndentationAfterEmptyBracket": {
+					"type": "boolean",
+					"scope": "resource",
+					"default": true,
+					"description": "If false, then any new lines directly after an empty bracket will be indented one level beyond the previous open bracket.\nIf true, the default vscode behaviour will be used."
+				}
+			}
+		}
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"postinstall": "node ./node_modules/vscode/bin/install",
+		"test": "npm run compile && node ./node_modules/vscode/bin/test"
+	},
+	"devDependencies": {
+		"@types/mocha": "^2.2.42",
+		"@types/node": "^7.10.7",
+		"typescript": "^2.9.2",
+		"vscode": "^1.1.36"
+	},
+	"keywords": [
+		"indent",
+		"indentation",
+		"bracket",
+		"brackets"
+	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/LAK132/vscode-indent-to-bracket.git"
+	},
+	"homepage": "https://github.com/LAK132/vscode-indent-to-bracket",
+	"license": "Unlicense",
+	"__metadata": {
+		"id": "5bea414b-84e3-4084-b06c-b305bd1ff4aa",
+		"publisherId": "88e29f26-cd75-43be-a126-d5ec9e788ece",
+		"publisherDisplayName": "LAK132"
+	}
+}

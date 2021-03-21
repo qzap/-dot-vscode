@@ -1,0 +1,246 @@
+{
+	"name": "vs-code-svelte-require",
+	"displayName": "Svelte Require",
+	"description": "Require svelte files, dependencies and core modules into a svelte component",
+	"version": "1.10.0",
+	"publisher": "nickyhajal",
+	"engines": {
+		"vscode": "^1.0.0"
+	},
+	"homepage": "https://github.com/nickyhajal/vscode_extension_svelte_require",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/nickyhajal/vscode_extension_svelte_require"
+	},
+	"bugs": {
+		"url": "https://github.com/nickyhajal/vscode_extension_svelte_require/issues"
+	},
+	"license": "MIT",
+	"icon": "resources/images/logo.png",
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onLanguage:svelte",
+		"onCommand:svelte_require.require",
+		"onCommand:svelte_require.requireAndInsert",
+		"onCommand:svelte_require.requireMultiple",
+		"onCommand:svelte_require.destructuringImport",
+		"onCommand:svelte_require.importAll"
+	],
+	"main": "./src/extension",
+	"contributes": {
+		"configuration": {
+			"type": "object",
+			"title": "Svelte Require",
+			"properties": {
+				"svelte_require.include": {
+					"type": "array",
+					"default": [
+						"svelte",
+						"js",
+						"ts",
+						"jsx",
+						"tsx",
+						"css",
+						"json"
+					],
+					"description": "include files to search for"
+				},
+				"svelte_require.exclude": {
+					"type": "array",
+					"default": [
+						"node_modules",
+						"typings",
+						"dist",
+						"bin",
+						"build",
+						"tmp"
+					],
+					"description": "defines files and folders to exclude"
+				},
+				"svelte_require.aliases": {
+					"type": "object",
+					"description": "A mapping from module name to a different alias (the variable name it is assigned to)",
+					"default": {
+						"backbone": "Backbone",
+						"backbone.marionette": "Marionette",
+						"bluebird": "Promise",
+						"cheerio": "$",
+						"ember": "Ember",
+						"handlebars": "Handlebars",
+						"highland": "hl",
+						"hogan.js": "Hogan",
+						"leaflet": "L",
+						"lodash": "_",
+						"string": "S",
+						"jquery": "$",
+						"jquery-ui": "ui",
+						"knockout": "ko",
+						"mustache": "Mustache",
+						"node-tap": "test",
+						"openlayers": "ol",
+						"pouchdb": "PouchDB",
+						"prova": "test",
+						"es6-promise": "Promise",
+						"raven-js": "Raven",
+						"native-promise-only": "Promise",
+						"node-uuid": "uuid",
+						"ractive": "Ractive",
+						"immutable": "Immutable",
+						"ramda": "R",
+						"react": "React",
+						"react-dom": "ReactDOM",
+						"react-addons-clone-with-props": "cloneWithProps",
+						"react-addons-create-fragment": "createFragment",
+						"react-addons-css-transition-group": "CSSTransitionGroup",
+						"react-addons-linked-state-mixin": "LinkedStateMixin",
+						"react-addons-pure-render-mixin": "PureRenderMixin",
+						"react-addons-shallow-compare": "shallowCompare",
+						"react-addons-transition-group": "TransitionGroup",
+						"react-addons-update": "update",
+						"roslib": "ROS",
+						"rsvp": "RSVP",
+						"underscore": "_",
+						"socket.io": "io",
+						"superagent": "request",
+						"spine": "Spine",
+						"tap": "test",
+						"three": "THREE",
+						"q": "Q",
+						"qunit": "QUnit",
+						"zepto": "$",
+						"graceful-fs": "fs",
+						"findup-sync": "findup",
+						"mime-types": "mime",
+						"gulp-util": "gutil",
+						"iconv-lite": "iconv",
+						"event-stream": "es",
+						"stream-line-wrapper": "LineWrapper",
+						"stream-to-array": "streamToArray",
+						"raw-body": "getRawBody",
+						"aws-sdk": "AWS",
+						"connect-dynamodb": "DynamoDBStore",
+						"connect-mysql": "MySQLStore",
+						"connect-sdb": "SdbStore",
+						"connect-sqlite3": "SQLiteStore",
+						"package.json": "pkg",
+						"tape": "test",
+						"sequelize": "Sequelize",
+						"r": "rethinkdb",
+						"underscore.string": "s"
+					}
+				},
+				"svelte_require.semi": {
+					"type": "boolean",
+					"default": false,
+					"description": "whether to insert semicolon after import/require if autodetect fails."
+				},
+				"svelte_require.singleQuote": {
+					"type": "boolean",
+					"default": true,
+					"description": "prefer single quote if autodetect fails."
+				},
+				"svelte_require.defaultRequireMethod": {
+					"type": [
+						"string"
+					],
+					"enum": [
+						"",
+						"require",
+						"import"
+					],
+					"description": "what method should be used if not automatically detected. If none provided you will be asked each time."
+				},
+				"svelte_require.preserveAcronymCase": {
+					"type": "boolean",
+					"default": false,
+					"description": "convert filename to camelCase but preserves acronyms like `devSQLConfig` or `XMLImporter`."
+				},
+				"svelte_require.insertAtCursor": {
+					"type": "boolean",
+					"default": false,
+					"description": "places import statements at cursor instead of at the bottom of the import block"
+				}
+			}
+		},
+		"commands": [
+			{
+				"command": "svelte_require.require",
+				"title": "Node require/import"
+			},
+			{
+				"command": "svelte_require.requireMultiple",
+				"title": "Node require/import multiple"
+			},
+			{
+				"command": "svelte_require.requireAndInsert",
+				"title": "Node require/import and insert reference"
+			},
+			{
+				"command": "svelte_require.destructuringImport",
+				"title": "Node destructuring require/import"
+			},
+			{
+				"command": "svelte_require.importAll",
+				"title": "Node require - import all"
+			}
+		],
+		"keybindings": [
+			{
+				"command": "svelte_require.require",
+				"key": "ctrl+alt+1"
+			},
+			{
+				"command": "svelte_require.requireAndInsert",
+				"key": "ctrl+shift+2"
+			},
+			{
+				"command": "svelte_require.destructuringImport",
+				"key": "ctrl+shift+3"
+			}
+		]
+	},
+	"scripts": {
+		"postinstall": "node ./node_modules/vscode/bin/install",
+		"test": "mocha",
+		"testw": "mocha --watch"
+	},
+	"devDependencies": {
+		"babel-eslint": "^10.0.1",
+		"chai": "^4.2.0",
+		"eslint": "^5.9.0",
+		"eslint-config-react-app": "^3.0.5",
+		"eslint-config-teselagen": "^4.1.2",
+		"eslint-plugin-flowtype": "^3.2.0",
+		"eslint-plugin-import": "^2.14.0",
+		"eslint-plugin-jsx-a11y": "^5.1.1",
+		"eslint-plugin-no-only-tests": "^2.1.0",
+		"eslint-plugin-react": "^7.11.1",
+		"husky": "^1.2.0",
+		"lint-staged": "^8.1.0",
+		"mocha": "^5.2.0",
+		"prettier": "^1.15.3",
+		"vscode": "^1.1.22"
+	},
+	"dependencies": {
+		"lodash": "^4.17.15"
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "lint-staged && yarn test"
+		}
+	},
+	"lint-staged": {
+		"*.js": [
+			"eslint --fix --max-warnings=0",
+			"prettier --write",
+			"git add"
+		]
+	},
+	"__metadata": {
+		"id": "6482d2f1-325c-47ca-a0e1-27de7d0f5efa",
+		"publisherId": "b6329624-f930-44c9-8db3-9f1fa45bf739",
+		"publisherDisplayName": "Nicky Hajal"
+	}
+}

@@ -1,0 +1,560 @@
+{
+	"keywords": [
+		"terminal",
+		"keybindings",
+		"shell",
+		"keymap",
+		"theme",
+		"script"
+	],
+	"name": "terminal-all-in-one",
+	"displayName": "Terminal All In One",
+	"description": "Enhance your integrated terminal with themes, scripts, keybindings, and commands.",
+	"version": "1.11.16",
+	"homepage": "https://marketplace.visualstudio.com/items?itemName=yasht.terminal-all-in-one",
+	"license": "MIT",
+	"publisher": "yasht",
+	"galleryBanner": {
+		"color": "#ededed",
+		"theme": "light"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/YashTotale/terminal-all-in-one"
+	},
+	"bugs": {
+		"url": "https://github.com/YashTotale/terminal-all-in-one/issues"
+	},
+	"icon": "images/terminal-icon.jpg",
+	"author": {
+		"name": "Yash T"
+	},
+	"main": "./dist/extension",
+	"engines": {
+		"vscode": "^1.47.0"
+	},
+	"categories": [
+		"Other",
+		"Keymaps",
+		"Themes"
+	],
+	"activationEvents": [
+		"onCommand:terminalAllInOne.deleteCurrentTerminal",
+		"onCommand:terminalAllInOne.createNewTerminal",
+		"onCommand:terminalAllInOne.renameCurrentTerminal",
+		"onCommand:terminalAllInOne.focusNextTerminal",
+		"onCommand:terminalAllInOne.focusPreviousTerminal",
+		"onCommand:terminalAllInOne.selectDefaultShell",
+		"onCommand:terminalAllInOne.toggleMaxTerm",
+		"onCommand:terminalAllInOne.chooseTerminalTheme",
+		"onCommand:terminalAllInOne.changeCursorWidth",
+		"onCommand:terminalAllInOne.changeCursorStyle",
+		"onCommand:terminalAllInOne.toggleBlinkingCursor",
+		"onCommand:terminalAllInOne.changeFontSize",
+		"onCommand:terminalAllInOne.changeFontWeight",
+		"onCommand:terminalAllInOne.decreaseFontSize",
+		"onCommand:terminalAllInOne.increaseFontSize",
+		"onCommand:terminalAllInOne.clearTerminal",
+		"onCommand:terminalAllInOne.runScript",
+		"onStartupFinished"
+	],
+	"contributes": {
+		"commands": [
+			{
+				"command": "terminalAllInOne.createNewTerminal",
+				"title": "Terminal All In One: Create New Terminal"
+			},
+			{
+				"command": "terminalAllInOne.focusNextTerminal",
+				"title": "Terminal All In One: Focus Next Terminal"
+			},
+			{
+				"command": "terminalAllInOne.focusPreviousTerminal",
+				"title": "Terminal All In One: Focus Previous Terminal"
+			},
+			{
+				"command": "terminalAllInOne.deleteCurrentTerminal",
+				"title": "Terminal All In One: Delete Current Terminal"
+			},
+			{
+				"command": "terminalAllInOne.renameCurrentTerminal",
+				"title": "Terminal All In One: Rename Current Terminal"
+			},
+			{
+				"command": "terminalAllInOne.selectDefaultShell",
+				"title": "Terminal All In One: Select Default Shell"
+			},
+			{
+				"command": "terminalAllInOne.toggleMaxTerm",
+				"title": "Terminal All In One: Toggle Maximized Terminal"
+			},
+			{
+				"command": "terminalAllInOne.chooseTerminalTheme",
+				"title": "Terminal All In One: Choose Theme"
+			},
+			{
+				"command": "terminalAllInOne.changeCursorWidth",
+				"title": "Terminal All In One: Change Cursor Width"
+			},
+			{
+				"command": "terminalAllInOne.changeCursorStyle",
+				"title": "Terminal All In One: Change Cursor Style"
+			},
+			{
+				"command": "terminalAllInOne.toggleBlinkingCursor",
+				"title": "Terminal All In One: Toggle Blinking Cursor"
+			},
+			{
+				"command": "terminalAllInOne.changeFontSize",
+				"title": "Terminal All In One: Change Font Size"
+			},
+			{
+				"command": "terminalAllInOne.decreaseFontSize",
+				"title": "Terminal All In One: Decrease Font Size"
+			},
+			{
+				"command": "terminalAllInOne.increaseFontSize",
+				"title": "Terminal All In One: Increase Font Size"
+			},
+			{
+				"command": "terminalAllInOne.changeFontWeight",
+				"title": "Terminal All In One: Change Font Weight"
+			},
+			{
+				"command": "terminalAllInOne.clearTerminal",
+				"title": "Terminal All In One: Clear Terminal"
+			},
+			{
+				"command": "terminalAllInOne.runScript",
+				"title": "Terminal All In One: Run Script"
+			}
+		],
+		"keybindings": [
+			{
+				"key": "ctrl+`",
+				"mac": "cmd+`",
+				"command": "workbench.action.terminal.toggleTerminal",
+				"when": "!config.terminalAllInOne.disableAllKeybindings"
+			},
+			{
+				"key": "ctrl+i s",
+				"mac": "cmd+i s",
+				"command": "terminalAllInOne.selectDefaultShell",
+				"when": "!config.terminalAllInOne.disableAllKeybindings"
+			},
+			{
+				"key": "ctrl+i c",
+				"mac": "cmd+i c",
+				"command": "terminalAllInOne.createNewTerminal",
+				"when": "!config.terminalAllInOne.disableAllKeybindings"
+			},
+			{
+				"key": "ctrl+i d",
+				"mac": "cmd+i d",
+				"command": "terminalAllInOne.deleteCurrentTerminal",
+				"when": "!config.terminalAllInOne.disableAllKeybindings"
+			},
+			{
+				"key": "ctrl+i r",
+				"mac": "cmd+i r",
+				"command": "terminalAllInOne.renameCurrentTerminal",
+				"when": "!config.terminalAllInOne.disableAllKeybindings"
+			},
+			{
+				"key": "ctrl+i .",
+				"mac": "cmd+i .",
+				"command": "terminalAllInOne.focusNextTerminal",
+				"when": "!config.terminalAllInOne.disableAllKeybindings"
+			},
+			{
+				"key": "ctrl+i ,",
+				"mac": "cmd+i ,",
+				"command": "terminalAllInOne.focusPreviousTerminal",
+				"when": "!config.terminalAllInOne.disableAllKeybindings"
+			},
+			{
+				"key": "ctrl+i m",
+				"mac": "cmd+i m",
+				"command": "terminalAllInOne.toggleMaxTerm",
+				"when": "!config.terminalAllInOne.disableAllKeybindings"
+			},
+			{
+				"key": "ctrl+i t",
+				"mac": "cmd+i t",
+				"command": "terminalAllInOne.chooseTerminalTheme",
+				"when": "!config.terminalAllInOne.disableAllKeybindings"
+			},
+			{
+				"key": "ctrl+i w",
+				"mac": "cmd+i w",
+				"command": "terminalAllInOne.changeCursorWidth",
+				"when": "!config.terminalAllInOne.disableAllKeybindings"
+			},
+			{
+				"key": "ctrl+i y",
+				"mac": "cmd+i y",
+				"command": "terminalAllInOne.changeCursorStyle",
+				"when": "!config.terminalAllInOne.disableAllKeybindings"
+			},
+			{
+				"key": "ctrl+i b",
+				"mac": "cmd+i b",
+				"command": "terminalAllInOne.toggleBlinkingCursor",
+				"when": "!config.terminalAllInOne.disableAllKeybindings"
+			},
+			{
+				"key": "ctrl+i f",
+				"mac": "cmd+i f",
+				"command": "terminalAllInOne.changeFontSize",
+				"when": "!config.terminalAllInOne.disableAllKeybindings"
+			},
+			{
+				"key": "ctrl+i -",
+				"mac": "cmd+i -",
+				"command": "terminalAllInOne.decreaseFontSize",
+				"when": "!config.terminalAllInOne.disableAllKeybindings"
+			},
+			{
+				"key": "ctrl+i =",
+				"mac": "cmd+i =",
+				"command": "terminalAllInOne.increaseFontSize",
+				"when": "!config.terminalAllInOne.disableAllKeybindings"
+			},
+			{
+				"key": "ctrl+i q",
+				"mac": "cmd+i q",
+				"command": "terminalAllInOne.changeFontWeight",
+				"when": "!config.terminalAllInOne.disableAllKeybindings"
+			},
+			{
+				"key": "ctrl+i backspace",
+				"mac": "cmd+i backspace",
+				"command": "terminalAllInOne.clearTerminal",
+				"when": "!config.terminalAllInOne.disableAllKeybindings"
+			},
+			{
+				"key": "ctrl+i enter",
+				"mac": "cmd+i enter",
+				"command": "terminalAllInOne.runScript",
+				"when": "!config.terminalAllInOne.disableAllKeybindings"
+			},
+			{
+				"key": "ctrl+i 0",
+				"mac": "cmd+i 0",
+				"command": "terminalAllInOne.runScript",
+				"when": "!config.terminalAllInOne.disableAllKeybindings",
+				"args": 0
+			},
+			{
+				"key": "ctrl+i 1",
+				"mac": "cmd+i 1",
+				"command": "terminalAllInOne.runScript",
+				"when": "!config.terminalAllInOne.disableAllKeybindings",
+				"args": 1
+			},
+			{
+				"key": "ctrl+i 2",
+				"mac": "cmd+i 2",
+				"command": "terminalAllInOne.runScript",
+				"when": "!config.terminalAllInOne.disableAllKeybindings",
+				"args": 2
+			},
+			{
+				"key": "ctrl+i 3",
+				"mac": "cmd+i 3",
+				"command": "terminalAllInOne.runScript",
+				"when": "!config.terminalAllInOne.disableAllKeybindings",
+				"args": 3
+			},
+			{
+				"key": "ctrl+i 4",
+				"mac": "cmd+i 4",
+				"command": "terminalAllInOne.runScript",
+				"when": "!config.terminalAllInOne.disableAllKeybindings",
+				"args": 4
+			},
+			{
+				"key": "ctrl+i 5",
+				"mac": "cmd+i 5",
+				"command": "terminalAllInOne.runScript",
+				"when": "!config.terminalAllInOne.disableAllKeybindings",
+				"args": 5
+			},
+			{
+				"key": "ctrl+i 6",
+				"mac": "cmd+i 6",
+				"command": "terminalAllInOne.runScript",
+				"when": "!config.terminalAllInOne.disableAllKeybindings",
+				"args": 6
+			},
+			{
+				"key": "ctrl+i 7",
+				"mac": "cmd+i 7",
+				"command": "terminalAllInOne.runScript",
+				"when": "!config.terminalAllInOne.disableAllKeybindings",
+				"args": 7
+			},
+			{
+				"key": "ctrl+i 8",
+				"mac": "cmd+i 8",
+				"command": "terminalAllInOne.runScript",
+				"when": "!config.terminalAllInOne.disableAllKeybindings",
+				"args": 8
+			},
+			{
+				"key": "ctrl+i 9",
+				"mac": "cmd+i 9",
+				"command": "terminalAllInOne.runScript",
+				"when": "!config.terminalAllInOne.disableAllKeybindings",
+				"args": 9
+			}
+		],
+		"configuration": {
+			"title": "Terminal All In One",
+			"properties": {
+				"terminalAllInOne.terminalTheme": {
+					"type": "string",
+					"markdownDescription": "A Terminal Theme from [this list](https://glitchbone.github.io/vscode-base16-term/#/)",
+					"default": "None",
+					"enum": [
+						"3024",
+						"Apathy",
+						"Ashes",
+						"Atelier Cave Light",
+						"Atelier Cave",
+						"Atelier Dune Light",
+						"Atelier Dune",
+						"Atelier Estuary Light",
+						"Atelier Estuary",
+						"Atelier Forest Light",
+						"Atelier Forest",
+						"Atelier Heath Light",
+						"Atelier Heath",
+						"Atelier Lakeside Light",
+						"Atelier Lakeside",
+						"Atelier Plateau Light",
+						"Atelier Plateau",
+						"Atelier Savanna Light",
+						"Atelier Savanna",
+						"Atelier Seaside Light",
+						"Atelier Seaside",
+						"Atelier Sulphurpool Light",
+						"Atelier Sulphurpool",
+						"Bespin",
+						"Brewer",
+						"Bright",
+						"Brushtrees Dark",
+						"Brushtrees",
+						"Chalk",
+						"Circus",
+						"Classic Dark",
+						"Classic Light",
+						"Codeschool",
+						"Cupcake",
+						"Cupertino",
+						"Darktooth",
+						"Default Dark",
+						"Default Light",
+						"Dracula",
+						"Eighties",
+						"Embers",
+						"Flat",
+						"Github",
+						"Google Dark",
+						"Google Light",
+						"Grayscale Dark",
+						"Grayscale Light",
+						"Greenscreen",
+						"Gruvbox Dark Hard",
+						"Gruvbox Dark Medium",
+						"Gruvbox Dark Pale",
+						"Gruvbox Dark Soft",
+						"Gruvbox Light Hard",
+						"Gruvbox Light Medium",
+						"Gruvbox Light Soft",
+						"Harmonic Dark",
+						"Harmonic Light",
+						"Hopscotch",
+						"Icy",
+						"Irblack",
+						"Isotope",
+						"Macintosh",
+						"Marrakesh",
+						"Materia",
+						"Material Darker",
+						"Material Lighter",
+						"Material Palenight",
+						"Material",
+						"Mellow Purple",
+						"Mexico Light",
+						"Mocha",
+						"Monokai",
+						"Nord",
+						"Ocean",
+						"Oceanicnext",
+						"One Light",
+						"Onedark",
+						"Paraiso",
+						"Phd",
+						"Pico",
+						"Pop",
+						"Porple",
+						"Railscasts",
+						"Rebecca",
+						"Seti",
+						"Shapeshifter",
+						"Solarflare",
+						"Solarized Dark",
+						"Solarized Light",
+						"Spacemacs",
+						"Summerfruit Dark",
+						"Summerfruit Light",
+						"Tomorrow Night",
+						"Tomorrow",
+						"Tube",
+						"Twilight",
+						"Unikitty Dark",
+						"Unikitty Light",
+						"Woodland",
+						"Xcode Dusk",
+						"Zenburn",
+						"None"
+					]
+				},
+				"terminalAllInOne.disableAllKeybindings": {
+					"type": "boolean",
+					"description": "Controls whether all keybindings are disabled",
+					"default": false
+				},
+				"terminalAllInOne.messages": {
+					"type": "object",
+					"markdownDescription": "Controls which messages should be shown if `#terminalAllInOne.disableAllMessages#` is set to false",
+					"default": {
+						"shouldShowThemeQuickPickMessage": true,
+						"shouldShowSelectedThemeMessage": true,
+						"shouldShowFontSizeQuickPickMessage": true,
+						"shouldShowSelectedFontSizeMessage": true,
+						"shouldShowFontWeightQuickPickMessage": true,
+						"shouldShowSelectedFontWeightMessage": true,
+						"shouldShowCursorWidthQuickPickMessage": true,
+						"shouldShowSelectedCursorWidthMessage": true,
+						"shouldShowCursorStyleQuickPickMessage": true,
+						"shouldShowSelectedCursorStyleMessage": true,
+						"shouldShowBlinkingCursorToggledMessage": true,
+						"shouldShowDisableScriptDescriptionMessage": true
+					},
+					"properties": {
+						"shouldShowThemeQuickPickMessage": {
+							"type": "boolean"
+						},
+						"shouldShowSelectedThemeMessage": {
+							"type": "boolean"
+						},
+						"shouldShowFontSizeQuickPickMessage": {
+							"type": "boolean"
+						},
+						"shouldShowSelectedFontSizeMessage": {
+							"type": "boolean"
+						},
+						"shouldShowFontWeightQuickPickMessage": {
+							"type": "boolean"
+						},
+						"shouldShowSelectedFontWeightMessage": {
+							"type": "boolean"
+						},
+						"shouldShowCursorWidthQuickPickMessage": {
+							"type": "boolean"
+						},
+						"shouldShowSelectedCursorWidthMessage": {
+							"type": "boolean"
+						},
+						"shouldShowCursorStyleQuickPickMessage": {
+							"type": "boolean"
+						},
+						"shouldShowSelectedCursorStyleMessage": {
+							"type": "boolean"
+						},
+						"shouldShowBlinkingCursorToggledMessage": {
+							"type": "boolean"
+						},
+						"shouldShowDisableScriptDescriptionMessage": {
+							"type": "boolean"
+						}
+					}
+				},
+				"terminalAllInOne.disableAllMessages": {
+					"type": "boolean",
+					"description": "Controls whether all messages (info, warning, and error) from this extension are disabled",
+					"default": false
+				},
+				"terminalAllInOne.scripts": {
+					"type": "array",
+					"description": "An array of scripts",
+					"default": [],
+					"items": {
+						"properties": {
+							"name": {
+								"type": "string",
+								"description": "The name of the script (used in the quick pick)"
+							},
+							"script": {
+								"oneOf": [
+									{
+										"type": "string",
+										"description": "The command (string) to run in the terminal when this script is triggered"
+									},
+									{
+										"type": "array",
+										"description": "The commands (array) to run in the terminal when this script is triggered"
+									}
+								]
+							}
+						},
+						"required": [
+							"name",
+							"script"
+						]
+					}
+				},
+				"terminalAllInOne.script.disableDescription": {
+					"type": "boolean",
+					"description": "Controls whether the script description command is disabled when running a script",
+					"default": false
+				}
+			}
+		}
+	},
+	"scripts": {
+		"test": "node ./out/test/runTest.js",
+		"test-compile": "tsc -p ./",
+		"vscode:prepublish": "webpack --mode production",
+		"webpack": "webpack --mode development",
+		"webpack-dev": "webpack --mode development --watch"
+	},
+	"devDependencies": {
+		"@types/glob": "^7.1.1",
+		"@types/lodash.debounce": "^4.0.6",
+		"@types/mocha": "^8.0.0",
+		"@types/node": "^14.14.10",
+		"@types/serialize-javascript": "^5.0.0",
+		"@types/vscode": "^1.47.0",
+		"glob": "^7.1.6",
+		"mocha": "^8.2.1",
+		"typescript": "^4.1.2",
+		"ts-loader": "^8.0.11",
+		"vscode-test": "^1.4.0",
+		"webpack": "^5.9.0",
+		"webpack-cli": "^4.2.0"
+	},
+	"dependencies": {
+		"lodash.debounce": "^4.0.8",
+		"moment": "^2.29.1",
+		"serialize-javascript": "^5.0.1",
+		"vscode-uri": "^2.1.2"
+	},
+	"__metadata": {
+		"id": "3697586c-677f-4321-9bb0-45f96e1057d1",
+		"publisherId": "d2e8de38-8623-4c64-bb23-d41ed1a6c290",
+		"publisherDisplayName": "Yash T"
+	}
+}

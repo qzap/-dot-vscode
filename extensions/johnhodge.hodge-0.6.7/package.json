@@ -1,0 +1,67 @@
+{
+	"name": "hodge",
+	"displayName": "Hodge 💻",
+	"description": "Hodge is a collection of clean and distractionless light & dark themes.",
+	"version": "0.6.7",
+	"publisher": "johnhodge",
+	"icon": "images/logo.png",
+	"engines": {
+		"vscode": "^1.43.0"
+	},
+	"extensionKind": [
+		"ui"
+	],
+	"galleryBanner": {
+		"color": "#f3f3f3",
+		"theme": "light"
+	},
+	"categories": [
+		"Themes",
+		"Other"
+	],
+	"keywords": [
+		"theme",
+		"hodge",
+		"clean",
+		"italic",
+		"dark",
+		"light"
+	],
+	"contributes": {
+		"themes": [
+			{
+				"label": "Hodge Dim",
+				"uiTheme": "vs-dark",
+				"path": "./themes/dim.json"
+			},
+			{
+				"label": "Hodge Lite",
+				"uiTheme": "vs",
+				"path": "./themes/lite.json"
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "node ./node_modules/vscode/bin/compile",
+		"compile": "node ./node_modules/vscode/bin/compile -watch -p ./"
+	},
+	"dependencies": {},
+	"devDependencies": {
+		"vscode": "0.10.x",
+		"typescript": "^1.6.2"
+	},
+	"bugs": {
+		"url": "https://github.com/johnhodge/hodge/issues",
+		"email": "theme@hod.ge"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/johnhodge/hodge.git"
+	},
+	"homepage": "https://github.com/johnhodge/hodge/blob/master/README.md",
+	"__metadata": {
+		"id": "8aca60dd-6809-4231-80f2-918f89350dff",
+		"publisherId": "08b31282-e1a0-4afa-8e88-90e28a8db940",
+		"publisherDisplayName": "johnhodge"
+	}
+}

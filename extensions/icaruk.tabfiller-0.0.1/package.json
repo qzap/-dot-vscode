@@ -1,0 +1,53 @@
+{
+	"version": "0.0.1",
+	"name": "tabfiller",
+	"displayName": "Tab filler",
+	"author": "Icaruk",
+	"publisher": "Icaruk",
+	"description": "Fills empty lines with tabs ",
+	"engines": {
+		"vscode": "^1.40.0"
+	},
+	"categories": [
+		"Formatters"
+	],
+	"keywords": [
+		"format",
+		"formatter",
+		"tab",
+		"space",
+		"align",
+		"fill"
+	],
+	"activationEvents": [
+		"onCommand:extension.fillTabs"
+	],
+	"main": "./out/extension",
+	"contributes": {
+		"commands": [
+			{
+				"command": "extension.fillTabs",
+				"title": "Fill tabs"
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"lint": "eslint . --ext .ts,.tsx",
+		"watch": "tsc -watch -p ./"
+	},
+	"devDependencies": {
+		"@types/node": "^12.12.0",
+		"@typescript-eslint/eslint-plugin": "^3.0.2",
+		"@typescript-eslint/parser": "^3.0.2",
+		"eslint": "^7.1.0",
+		"typescript": "^4.0.2",
+		"@types/vscode": "^1.40.0"
+	},
+	"__metadata": {
+		"id": "33d3b604-acc4-43f4-8f47-4db880b2e431",
+		"publisherId": "a8f0eb5b-d8fd-4ca9-a843-b2b6fc0e739b",
+		"publisherDisplayName": "Icaruk"
+	}
+}

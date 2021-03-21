@@ -1,0 +1,23 @@
+{
+  "themeName": "Svelte Dark",
+  "editorBackground": "#1f1f1f",
+  "editorForeground": "#eeffff",
+  "activityBarBadgeBackground": "#007acc",
+  "sideBarTitleForeground": "#bbbbbb",
+  "commentFontStyle": "italic",
+  "commentForeground": "#737384",
+  "constantOtherColor": "#ffffff",
+  "invalidColor": "#FF5370",
+  "keywordStorageColor": "#74a9c8",
+  "operatorMiscColor": "#b5d1e2",
+  "tagColor": "#FF8964",
+  "functionColor": "#ebf3f7",
+  "numConstArgColor": "#ddd",
+  "stringSymbolColor": "#FFCB6B",
+  "classSupportColor": "#FFCB6B",
+  "entityTypesColor": "#d6e5ef",
+  "urlFontStyle": "underline",
+  "jsonKeyLevel4": "#C17E70",
+  "markdownRawInlinePunctuation": "#65737E",
+  "markdownFenced": "#00000050"
+}

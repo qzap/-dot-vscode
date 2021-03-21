@@ -1,0 +1,45 @@
+{
+	"name": "pony",
+	"displayName": "Pony Language Colorizer",
+	"description": "Pony Language Colorizer. Based on https://github.com/ponylang/sublime-pony",
+	"version": "0.0.4",
+	"publisher": "npruehs",
+	"engines": {
+		"vscode": "^1.0.0"
+	},
+	"categories": [
+		"Languages"
+	],
+	"contributes": {
+		"languages": [
+			{
+				"id": "pony",
+				"aliases": [
+					"Pony",
+					"pony"
+				],
+				"extensions": [
+					".pony"
+				],
+				"configuration": "./pony.configuration.json"
+			}
+		],
+		"grammars": [
+			{
+				"language": "pony",
+				"scopeName": "source.pony",
+				"path": "./syntaxes/pony.tmLanguage"
+			}
+		]
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/npruehs/vscode-pony"
+	},
+	"icon": "icon.png",
+	"__metadata": {
+		"id": "72f8dc33-5a08-45dd-9aa9-b952a6788e59",
+		"publisherId": "4c69ec05-8ea4-4d13-9ca9-a98632d5113b",
+		"publisherDisplayName": "Nick Prühs"
+	}
+}

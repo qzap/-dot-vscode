@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
+  <Metadata>
+    <Identity Language="en-US" Id="ES6-extension-pack" Version="0.0.3" Publisher="walkme"/>
+    <DisplayName>ES6 extension pack</DisplayName>
+    <Description xml:space="preserve">The most common extensions for ES6 in one pack.
+This extension pack includes: 
+
+JavaScript (ES6) code snippets
+React-Native/React/Redux snippets for es6/es7
+Babel ES6/ES7
+es6-string-html
+ES6 Mocha Snippets
+React Redux ES6 Snippets
+ES5 to ES6
+ES6 Import Formatter</Description>
+    <Tags>javascript</Tags>
+    <Categories>Extension Packs</Categories>
+    <GalleryFlags>Public</GalleryFlags>
+    <Badges></Badges>
+    <Properties>
+      <Property Id="Microsoft.VisualStudio.Code.Engine" Value="^1.30.0" />
+      <Property Id="Microsoft.VisualStudio.Code.ExtensionDependencies" Value="" />
+      <Property Id="Microsoft.VisualStudio.Code.ExtensionPack" Value="xabikos.JavaScriptSnippets,EQuimper.react-native-react-redux,dzannotti.vscode-babel-coloring,Tobermory.es6-string-html,spoonscen.es6-mocha-snippets,timothymclane.react-redux-es6-snippets,jeremyrajan.vscode-lebab,henry-li.vscode-import-formatter" />
+      <Property Id="Microsoft.VisualStudio.Code.LocalizedLanguages" Value="" />
+      
+        <Property Id="Microsoft.VisualStudio.Services.Links.Source" Value="https://walkme-shortcuts.com/" />
+        <Property Id="Microsoft.VisualStudio.Services.Links.Getstarted" Value="https://walkme-shortcuts.com/" />
+        
+          <Property Id="Microsoft.VisualStudio.Services.Links.Repository" Value="https://walkme-shortcuts.com/" />
+        
+      
+      
+      <Property Id="Microsoft.VisualStudio.Services.Links.Learn" Value="https://walkme-shortcuts.com/" />
+      
+      
+      <Property Id="Microsoft.VisualStudio.Services.GitHubFlavoredMarkdown" Value="true" />
+      
+      
+    </Properties>
+    
+    
+  </Metadata>
+  <Installation>
+    <InstallationTarget Id="Microsoft.VisualStudio.Code"/>
+  </Installation>
+  <Dependencies/>
+  <Assets>
+    <Asset Type="Microsoft.VisualStudio.Code.Manifest" Path="extension/package.json" Addressable="true" />
+    <Asset Type="Microsoft.VisualStudio.Services.Content.Details" Path="extension/README.md" Addressable="true" /><Asset Type="Microsoft.VisualStudio.Services.Content.Changelog" Path="extension/CHANGELOG.md" Addressable="true" />
+  </Assets>
+</PackageManifest>

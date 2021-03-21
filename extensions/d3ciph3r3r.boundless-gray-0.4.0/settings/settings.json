@@ -1,0 +1,23 @@
+{
+    "terminal.external.windowsExec": "C:\\msys64\\msys2.exe",
+
+    "terminal.integrated.shell.windows": "C:\\msys64\\usr\\bin\\bash.exe",
+    "terminal.integrated.shellArgs.windows": ["--login"],
+    "terminal.integrated.env.windows": {
+        "CHERE_INVOKING": "1",
+        "MSYSTEM": "MINGW64"
+    },
+    
+    "window.zoomLevel": 0,
+    "workbench.iconTheme": "simple-icons",
+    "workbench.colorTheme": "Boundless Gray",
+    "editor.fontFamily": "Input Mono, 'Courier New', monospace",
+
+    "editor.fontSize": 14,
+    "editor.fontWeight": "normal",
+    "editor.cursorStyle": "block",
+    "editor.minimap.enabled": false,
+    "editor.hideCursorInOverviewRuler": true,
+    
+    "editor.lineHeight": 22
+}

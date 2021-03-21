@@ -1,0 +1,64 @@
+{
+	"name": "googlesearch",
+	"displayName": "Google Search By Browser",
+	"description": "Search selection at default browser",
+	"version": "0.1.0",
+	"publisher": "naturallucky",
+	"engines": {
+		"vscode": "^1.20.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"keywords": [
+		"search",
+		"browser",
+		"selection"
+	],
+	"activationEvents": [
+		"*"
+	],
+	"main": "./extension",
+	"contributes": {
+		"commands": [
+			{
+				"command": "extension.googleSearchAtBrowser",
+				"title": "Google Search At Browser"
+			}
+		],
+		"menus": {
+			"editor/context": [
+				{
+					"command": "extension.googleSearchAtBrowser",
+					"group": "search"
+				}
+			]
+		},
+		"configuration": {
+			"title": "Google Search At Browser",
+			"properties": {
+				"googleSearchAtBrowser.url": {
+					"type": "string",
+					"default": "https://www.google.com/search?q=",
+					"description": "opened url before keyword"
+				}
+			}
+		}
+	},
+	"scripts": {
+		"postinstall": "node ./node_modules/vscode/bin/install",
+		"test": "node ./node_modules/vscode/bin/test"
+	},
+	"devDependencies": {
+		"typescript": "^2.6.1",
+		"vscode": "^1.1.6",
+		"eslint": "^4.11.0",
+		"@types/node": "^7.0.43",
+		"@types/mocha": "^2.2.42"
+	},
+	"__metadata": {
+		"id": "4683efbf-8696-49f5-83f0-3888df4d1d60",
+		"publisherId": "68a495ec-9463-4e5b-85da-abeb1a506862",
+		"publisherDisplayName": "naturallucky"
+	}
+}

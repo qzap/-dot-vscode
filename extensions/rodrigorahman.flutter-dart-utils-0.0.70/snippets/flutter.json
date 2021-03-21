@@ -1,0 +1,80 @@
+{
+	"statelessWidget": {
+		"prefix": "fu-stl",
+		"body": [
+			"import 'package:flutter/material.dart';",
+			"",
+			"class ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}} extends StatelessWidget {",
+			"   @override",
+			"   Widget build(BuildContext context) {",
+			"       return Scaffold(",
+			"           appBar: AppBar(title: Text('$2'),),",
+			"           body: Container(),",
+			"       );",
+			"  }",
+			"}"
+		],
+		"description": "Create Stateles Component with name of file and import material"
+	},
+	"statefulWidget": {
+		"prefix": "fu-stf",
+		"body": [
+			"import 'package:flutter/material.dart';",
+			"",
+			"class ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}} extends StatefulWidget {",
+			"  @override",
+			"  _${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}}State createState() => _${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}}State();",
+			"}",
+			"",
+			"class _${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}}State extends State<${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}}> {",
+			"",
+			"   @override",
+			"   Widget build(BuildContext context) {",
+			"       return Scaffold(",
+			"           appBar: AppBar(title: Text('$2'),),",
+			"           body: Container(),",
+			"       );",
+			"  }",
+			"}"
+		],
+		"description": "Create Stateles Component with name of file and import material"
+	},
+	"flutter_test_init": {
+		"prefix": "fu-f-test-init",
+		"body": [
+			"import 'package:flutter_test/flutter_test.dart';",
+			"",
+			"void main() {",
+			"",
+			"  setUp((){});",
+			"",
+			"  test('$1', () async {});",
+			"",
+			"}"
+		],
+		"description": "Test Dart Init"
+	},
+	"changeNotifier": {
+		"prefix": "fu-change-notifier",
+		"body": [
+			"import 'package:flutter/material.dart';",
+			"",
+			"class ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}} extends ChangeNotifier {}"
+		],
+		"description": "Create ChangeNotifier class"
+	},
+	"valueNotifier": {
+		"prefix": "fu-value-notifier",
+		"body": [
+			"final $1 = ValueNotifier<$2>($3);"
+		],
+		"description": "Create ValueNotifier"
+	},
+	"textEditingController": {
+		"prefix": "fu-text-editing-controller",
+		"body": [
+			"final $1EditingController = TextEditingController($2);"
+		],
+		"description": "Create TextEditingController"
+	}
+}
